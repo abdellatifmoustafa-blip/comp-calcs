@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <style>
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin-left: 100px;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 0px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 5px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid rgb(89, 203, 241);
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 30%;
+}}
+
+
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid lightblue;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 4px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid lightblue;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+  font-size: 12px;
+    border: lightblue;    
+    height: 100%;
+    background-color: #eee;
+    width: 80px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+@media (max-width: 900px) {
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}     
+@media (max-width: 900px) {
+#panel2, .flip {
+        width: 200X;
+        display: block;
+        background: white;
+        color: black;
+        text-align: justify;
+        font-size: 100%;
+    }
+    #panel2 {
+width: 200X;
+display: none;
+}}
+@media (min-width: 900px) {
+  .accord {
+ font-size: 45px;
+}
+
+    .accordion {
+width: 200X;
+display: none;
+}}
+
+.btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+
+
+
+
+#container{
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 3%;
+  border-top: 1px solid #bdbdbd;
+  border-left: 1px solid #bdbdbd;
+  border-right: 1px solid #bdbdbd;
+}
+.accordion label{
+font-size: 12px;
+font-family:  'Times New Roman', Times, serif;
+background-color:  white;
+color: blue;
+border: black ;
+background:white;
+height: 0px;
+text-align: center;
+padding-top: 0%;
+font-size: 12px;
+height: 10px;
+
+}
+
+.accordion p{
+  color: #424242;
+  padding: 0px;
+  padding-top: 0px;
+  font-size: 16px;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  text-align: left;
+  margin-top: 0px;
+  width : 100%;
+}
+
+#tm:checked ~ .hiddentext{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+input#tm{
+  display: none;
+  position: relative;
+}
+
+#tn:checked ~ .hiddentext{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+input#tn{
+  display: none;
+  position: relative;
+}
+
+#to:checked ~ .hiddentext{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+input#to{
+  display: none;
+  position: relative;
+}
+
+.accord {
+    font-family: 'Vollkorn', serif;  
+ background-color: #eee;
+ background: #eee;
+ border: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+  height: 40px;
+  width: 50%;
+
+  text-align: center;
+  outline: none;
+  font-size: 25px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #eee;
+  
+ 
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:  black;
+   
+   
+   
+    border-bottom: solid 1px rgb(89, 203, 241);}
+
+
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.button2 {
+  font-size: 16px;
+  font-family:  'Times New Roman', Times, serif;
+background-color:  lightblue;
+color: #444;
+border: white ;
+background:lightblue;
+padding: 0px 10px 0px 10px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, lightblue, white);
+height: 8px;
+text-align: center;
+padding-top: 0%;
+font-size: 16px;
+margin-left: 0px;
+margin-top: 0%;
+margin-bottom: 0px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+
+text-decoration: none;
+border-radius: 4px;}
+
+</style>
+
+</head>
+<body>
+
+    <h2 style="color: rgb(5, 121, 160); font-weight: 900; margin-top: 0;">Flange press/temp rating, Carbon Steel</h2>
+    <span style="color: black; font-size: 16px; padding:0;margin: 0;line-height: 20px;">Flange Pressure - Temperature Rating, Carbon Steel<br>
+     
+      As temperature increases, the pressure rating of the flange decreases. <br>
+      
+    </span>
+      <div class="accordion">
+        <label for="tm" class="accordionitem">
+        <h3 style="color: rgb(5, 121, 160); font-weight: 900; font-size: 16px; padding:0;margin: 0;line-height: 20px;">Read more <span class="arrow">»</span></h3></label>
+        <input type="checkbox" id="tm"/>
+        <p class="hiddentext"> 
+            For example, a Class 150 flange is rated to approximately 270 PSIG at ambient 
+            conditions, 180 PSIG at approximately 400°F, 150 PSIG at approximately 600°F, 
+            and 75 PSIG at approximately 800°F.</p>
+      </div><br>
+    
+    
+    
+      <button class="accord">Calculation</button>
+    <div class="panel">  </div>
+    
+    <br><br><br>
+      
+
+      
+    
+    
+      <div id="panel2">
+    <form action="/action_page.php"> 
+    <div class="ident">
+    <div class="layout">
+    <div class="layout-heading">
+    <div class="layout-tools"></div>
+    </div>
+    <div class="layout-body">
+      <form role="form">  
+                              
+        <div class="inputProcess">Basis of calculation</div><br>
+        <p class="readme">Actual volume, initial pressure and initial temperature can be obtained from settle out pressure calculation. <br>
+          It is always a good practice to install orifice plates downstream of blowdown valves, that gives flexibility to reduce the blowdown time if a blowdown valve has a larger trim than required.
+        </p>
+      
+     
+        </form>
+      </div>
+      </div></div>
+      </div>
+    
+    
+    
+    
+    
+      <div class="left">
+         <div class="ident">
+           <div class="layout">
+               <div class="layout-heading">
+                  <div class="layout-tools"></div>
+               </div>
+                 <div class="layout-body">
+                     <form role="form">      
+                       
+                      
+    
+     <div class="wrapper"> 
+    <div class="inputProcess">Input service temperature and pressure class </div><br><br>
+
+
+    
+    
+        <label class="label">Service temperature</label>
+            <div class="combine">
+               <input type="text" class="boxes" id="t" value="60">
+                  <div class="combine-addon">
+                      <div class="drop-down-class">
+      <select class="first" id="input1Type">
+          <option value="F">F</option>
+        <option value="C">C</option>
+                        </select>
+    </div></div></div></div>                        
+
+
+<div class="wrapper">
+    <label class="label">Pressure class</label>
+        <select class="boxes" id="pipeid">
+            <option value='150'>150 ANSI Class</option>
+            <option value='300'>300 ANSI Class</option>
+            <option value='600'>600 ANSI Class</option>
+            <option value='900'>900 ANSI Class</option>
+            <option value='1500'>1500 ANSI Class </option>
+            <option value='2500'>2500 ANSI Class </option>
+            </select><br>
+        </select>	
+  
+  </div>  
+
+
+</form>
+</div>
+</div>
+</div>
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+ <div class="wrapper">
+   <button class="button2" onclick="calculate()">Result</button><br><br>
+    
+        
+  
+                 <div class="wrapper">
+                 <label class="label">Maximum Pressure,  psig (kPag)</label>
+                 <input type="text" class="boxes" id="ans1" disabled>
+              </div>
+              <div class="wrapper">
+                <label class="label">Test Pressure</label>
+                    <select class="boxes" id="pipeid2">
+                    <option value='Liquid (Water)'>Liquid (Water)</option>
+                    <option value='Gas (Air / Nitrogen)'>Gas (Air / Nitrogen)</option>
+                </select><br>
+            </select>	
+      
+            <div class="wrapper">
+                <label class="label">Maximum Test Pressure Per B31.3</label>
+                <input type="text" class="boxes" id="ans2" disabled>
+             </div>
+        </div></div></div></div> 
+
+        
+
+
+
+
+      </div>
+      <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function calculate () {   
+
+     
+    var t = parseFloat(document.getElementById('t').value);   
+    var input1Type = document.getElementById('input1Type').value;
+    if(input1Type === "F" ){
+        t = t * 1;
+    }else if(input1Type === "C" ){
+        t = (t * 9/5)+32;
+    }
+ var pipeid = document.getElementById('pipeid').value;
+ var mp;
+if(pipeid === '150' && t <= 100){ mp = 275;}
+   else if (pipeid === '150' && t <= 200 ){ mp = (((235 - 275)/100)*(t-100)) + 275;}
+   else if (pipeid === '150' && t <= 300 ){ mp = (((215 - 235)/100)*(t-200)) + 235;}
+   else if (pipeid === '150' && t <= 400 ){ mp = (((195 - 215)/100)*(t-300)) + 215;}
+
+if(pipeid === '300' && t <= 100){ mp = 720;}
+   else if (pipeid === '300' && t <= 200 ){ mp = (((620 - 720)/100)*(t-100)) + 720;}     
+   else if (pipeid === '300' && t <= 300 ){ mp = (((560 - 620)/100)*(t-200)) + 620;}
+   else if (pipeid === '300' && t <= 400 ){ mp = (((515 - 560)/100)*(t-300)) + 560;}
+if(pipeid === '600' && t <= 100){ mp = 1440;}
+   else if (pipeid === '600' && t <= 200 ){ mp = (((1240 - 1440)/100)*(t-100)) + 1440;}
+   else if (pipeid === '600' && t <= 300 ){ mp = (((1120 - 1240)/100)*(t-200)) + 1240;}
+   else if (pipeid === '600' && t <= 400 ){ mp = (((1025 - 1120)/100)*(t-300)) + 1120;}
+if(pipeid === '900' && t <= 100){ mp = 2160;}
+   else if (pipeid === '900' && t <= 200 ){ mp = (((1860 - 2160)/100)*(t-100)) + 2160;}     
+   else if (pipeid === '900' && t <= 300 ){ mp = (((1680 - 1860)/100)*(t-200)) + 1860;}
+   else if (pipeid === '900' && t <= 400 ){ mp = (((1540 - 1680)/100)*(t-300)) + 1680;}
+if(pipeid === '1500' && t <= 100){ mp = 3600;}
+   else if (pipeid === '1500' && t <= 200 ){ mp = (((3095 - 3600)/100)*(t-100)) + 3600;}
+   else if (pipeid === '1500' && t <= 300 ){ mp = (((2795 - 3095)/100)*(t-200)) + 3095;}
+   else if (pipeid === '1500' && t <= 400 ){ mp = (((2570 - 2795)/100)*(t-300)) + 2795;}
+if(pipeid === '2500' && t <= 100){ mp = 6000;}
+   else if (pipeid === '2500' && t <= 200 ){ mp = (((5160 - 6000)/100)*(t-100)) + 6000;}     
+   else if (pipeid === '2500' && t <= 300 ){ mp = (((4660 - 5160)/100)*(t-200)) + 5160;}
+   else if (pipeid === '2500' && t <= 400 ){ mp = (((4280 - 4660)/100)*(t-300)) + 4660;}
+   var mp_k=mp*6.895;
+   
+ var pipeid2 = document.getElementById('pipeid2').value;
+ var testp;
+ var ansimop;
+if(pipeid === '150' && pipeid2 === 'Liquid (Water)'){ ansimop=275, testp = ansimop * 1.5;}
+   else if (pipeid === '150' && pipeid2 === 'Gas (Air / Nitrogen)'){ ansimop=2750 , testp = ansimop * 1.1;}   
+if(pipeid === '300' && pipeid2 === 'Liquid (Water)'){ ansimop=720, testp = ansimop * 1.5;}
+   else if (pipeid === '300' && pipeid2 === 'Gas (Air / Nitrogen)'){ ansimop=720 , testp = ansimop * 1.1;}   
+if(pipeid === '600' && pipeid2 === 'Liquid (Water)'){ ansimop=1440, testp = ansimop * 1.5;}
+   else if (pipeid === '600' && pipeid2 === 'Gas (Air / Nitrogen)'){ ansimop=1440 , testp = ansimop * 1.1;}   
+if(pipeid === '900' && pipeid2 === 'Liquid (Water)'){ ansimop=2160, testp = ansimop * 1.5;}
+   else if (pipeid === '900' && pipeid2 === 'Gas (Air / Nitrogen)'){ ansimop=2160 , testp = ansimop * 1.1;}   
+if(pipeid === '1500' && pipeid2 === 'Liquid (Water)'){ ansimop=3600, testp = ansimop * 1.5;}
+   else if (pipeid === '1500' && pipeid2 === 'Gas (Air / Nitrogen)'){ ansimop=3600 , testp = ansimop * 1.1;}   
+if(pipeid === '2500' && pipeid2 === 'Liquid (Water)'){ ansimop=6000, testp = ansimop * 1.5;}
+   else if (pipeid === '2500' && pipeid2 === 'Gas (Air / Nitrogen)'){ ansimop=6000 , testp = ansimop * 1.1;}   
+
+
+
+var testp_k = testp *6.895; 
+
+     {
+        document.getElementById("ans1").value=mp.toFixed(0)+' psig'+" ("+mp_k.toFixed(0)+" kPag)";
+        document.getElementById("ans2").value=testp.toFixed(0)+' psig'+" ("+testp_k.toFixed(0)+" kPag)";
+    }
+}
+</script>
+</body>
+</html>

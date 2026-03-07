@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+
+
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.accordion {
+  font-family: 'Vollkorn', serif;  
+  background-color: rgb(220, 231, 15);
+  color: rgb(233, 225, 6);
+  cursor: pointer;
+  padding: 18px;
+  height: 80px;
+  width: 100%;
+  border: 3px outset #888;
+  text-align: center;
+  outline: none;
+  font-size: 45px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #999;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  background:linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:  rgb(7, 36, 54);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+    background-image: linear-gradient(lightgray 0%, white 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3pxgraya;}
+   .accordion:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border: 3px outset #ddd;
+  color:black;
+  background: linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;}
+
+  .btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+.button2 {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}
+
+@media (max-width: 900px) {
+.accordion  { font-size: 25px;} }
+.panel {
+padding: 0 18px;
+display: none;
+background-color: white;
+overflow: hidden;
+}
+
+.reset {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+
+
+
+button {   
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}    
+
+</style>   
+
+
+<body>
+
+
+      
+  <button4 style="text-align: center; width:100%" class="accordion">Gas Analysis</button4>
+  <div class="panel"><br><br>
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button><br><br>
+    </div>
+   
+  <div id="myDIV">
+      <form> 
+
+     
+    <span>The calculation helps to estimate 
+               
+</span>
+</form>
+</div>
+
+<div id="panel">
+    <form action="/action_page.php"> 
+      <div class="ident">
+        <div class="layout">
+            <div class="layout-heading">
+               <div class="layout-tools"></div>
+            </div>
+              <div class="layout-body">
+                  <form role="form">
+      
+<div class="wrapper">
+    <label class="label">Hydrogen, Mole% </label>
+    <input type="text" class="boxes" id="H2" value="0">
+</div>
+<div class="wrapper">
+    <label class="label">Helium, Mole% </label>
+    <input type="text" class="boxes" id="He" value="0">
+</div>
+<div class="wrapper">
+  <label class="label">Nitrogen, Mole% </label>
+  <input type="text" class="boxes" id="N2" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Water Vapour, Mole% </label>
+<input type="text" class="boxes" id="H2O" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Carbon monoxide, Mole% </label>
+<input type="text" class="boxes" id="CO" value="0">
+</div>   
+<div class="wrapper">
+<label class="label">Carbon dioxide </label>
+<input type="text" class="boxes" id="CO2" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Hydrogen sulfide, Mole% </label>
+<input type="text" class="boxes" id="H2S" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Methane, Mole% </label>
+<input type="text" class="boxes" id="C1" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Ethane, Mole% </label>
+<input type="text" class="boxes" id="C2" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Propane, Mole% </label>
+<input type="text" class="boxes" id="C3" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Isobutane, Mole% </label>
+<input type="text" class="boxes" id="iC4" value="0">
+</div>
+<div class="wrapper">
+<label class="label">n-Butane, Mole% </label>
+<input type="text" class="boxes" id="nC4" value="0">
+</div>
+<div class="wrapper">
+<label class="label">Isopentane, Mole%</label>
+<input type="text" class="boxes" id="iC5" value="0">
+</div>
+<div class="wrapper">
+<label class="label">n-Pentane, Mole% </label>
+<input type="text" class="boxes" id="nC5" value="0">
+</div>
+<div class="wrapper">
+<label class="label">n-Hexane, Mole% </label>
+<input type="text" class="boxes" id="C6" value="0">
+</div>
+<div class="wrapper">
+<label class="label">n-Heptane, Mole% </label>
+<input type="text" class="boxes" id="C7" value="0">
+</div>
+<div class="wrapper">
+<label class="label">n-Octane, Mole%</label>
+<input type="text" class="boxes" id="C8" value="0">
+</div>
+
+
+<input class="reset" type="reset" value="Reset">
+
+
+
+</form>
+</div></div></div></div>
+
+<div class="ident">
+    <div class="layout">
+       <div class="layout-heading">
+       <div class="layout-tools">
+    </div></div>
+    <div class="layout-body ">
+<h2>Input gas pessure and temperature </h2><br><br>
+        <div class="wrapper">
+            <label class="label">Pressure</label>
+            <div class="combine">
+               <input type="text" class="boxes" id="Pressure" value="600">
+                  <div class="combine-addon">
+                      <div class="drop-down-class">
+      <select class="first" id="input1Type">
+          <option value="psia">psia</option>
+        <option value="kpaa">kpaa</option>
+        <option value="bara">bara</option>
+                        </select>
+      </div></div></div></div>
+
+      <div class="wrapper">
+        <label class="label">Temperature</label>
+            <div class="combine">
+               <input type="text" class="boxes" id="Temperature" value="60">
+                  <div class="combine-addon">
+                      <div class="drop-down-class">
+      <select class="first" id="input2Type">
+          <option value="F">F</option>
+        <option value="C">C</option>
+                        </select>
+      </div></div></div></div>
+
+
+      <div class="wrapper">
+        <button class="button2" onclick="calculate()">Result</button><br><br>
+       </div>
+       <div class="wrapper">
+        <label class="label">Total Mole% Fraction</label>
+        <input type="text" class="boxes" id="z1" disabled>
+        </div>
+        
+        <div class="wrapper">
+        <label class="label">Molecular Weight</label>
+        <input type="text" class="boxes" id="z2" disabled>
+        </div>
+    
+        <div class="wrapper">
+        <label class="label">Specific Gravity</label>
+        <input type="text" class="boxes" id="z3" disabled>
+        </div>
+        <div class="wrapper">
+        <label class="label">Specific heats ratio</label>
+        <input type="text" class="boxes" id="z4" disabled>
+        </div>
+        <div class="wrapper">
+        <label class="label">Compressibility Factor</label>
+        <input type="text" class="boxes" id="z8" disabled>
+        </div>
+
+                
+        
+
+
+   
+        
+  
+
+  </div>
+ 
+
+  <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
+function calculate ()
+{ 
+    var H2 = parseFloat(document.getElementById("H2").value);
+    var He = parseFloat(document.getElementById("He").value);
+    var N2 = parseFloat(document.getElementById("N2").value);
+    var H2O = parseFloat(document.getElementById("H2O").value);
+    var CO = parseFloat(document.getElementById("CO").value);
+    var CO2 = parseFloat(document.getElementById("CO2").value);
+    var H2S = parseFloat(document.getElementById("H2S").value); 
+    var C1 = parseFloat(document.getElementById("C1").value);  
+    var C2 = parseFloat(document.getElementById("C2").value);
+    var C3 = parseFloat(document.getElementById("C3").value);
+    var iC4 = parseFloat(document.getElementById("iC4").value);
+    var nC4 = parseFloat(document.getElementById("nC4").value);
+    var iC5 = parseFloat(document.getElementById("iC5").value);
+    var nC5 = parseFloat(document.getElementById("nC5").value);
+    var C6 = parseFloat(document.getElementById("C6").value);
+    var C7 = parseFloat(document.getElementById("C7").value);
+    var C8 = parseFloat(document.getElementById("C8").value);
+ 
+    
+      
+    var Pressure = parseFloat(document.getElementById('Pressure').value);   
+    var input1Type = document.getElementById('input1Type').value;
+    if(input1Type === "psia" ){
+        Pressure = Pressure * 1;
+    }else if(input1Type === "kpaa" ){
+        Pressure = Pressure * 0.145038;
+    }else if(input1Type === "bara" ){
+        Pressure = Pressure * 14.5038;
+    }
+       
+    var Temperature = parseFloat(document.getElementById('Temperature').value);   
+    var input2Type = document.getElementById('input2Type').value;
+    if(input2Type === "F" ){
+        Temperature = Temperature * 1;
+    }else if(input2Type === "C" ){
+        Temperature = (Temperature * 9/5)+32;
+    }
+
+
+    var total = (H2 + He + N2 + H2O + CO + CO2 + H2S + C1 + C2 + C3 + iC4 + nC4 + iC5 + nC5 + C6 + C7 + C8);
+    var MW = (H2 * 2.016 + He * 4 + N2 * 28.02 + H2O * 18.01 + CO * 28.01 + CO2 * 44.01 +
+        H2S * 34.08 + C1 * 16.04 + C2 * 30.07 + C3 * 44.10 + iC4 * 58.12 +
+        nC4 * 58.12 + iC5 * 72.15 + nC5 * 72.15 + C6 * 86.18 + C7 * 100.21 +
+        C8 * 114.23) / 100;    
+    var SG = MW / 28.96;
+    var Tr = (H2 * 59.7 + He * 9.7 + N2 * 227.5 + H2O * 1165.1 + CO * 239.5 + CO2 * 547.7 + H2S * 672.4 + C1 * 343.3 + C2 * 550.1 + C3 * 665.9 + iC4 * 734.4 +nC4 * 765.5 + iC5 * 829 + nC5 * 845.7 + C6 * 911.8 + C7 * 970.9 +  C8 * 1023.5 ) / 100;
+    var Pr = (H2 * 187.5 + He * 32.99 + N2 * 492.8 + H2O * 3200.1 + CO * 506.8 + CO2 * 1069.5 + H2S * 1300 + C1 * 667 + C2 * 707.8 + C3 * 615 + iC4 * 527 + nC4 * 548 + iC5 * 490.4 + nC5 * 488.1 + C6 * 439.5 + C7 * 387.4 + C8 * 361.1) / 100;
+    var CP = (H2 * 6.9 + He * 4.96 + N2 * 6.95 + H2O * 8.01 + CO * 6.96 + CO2 * 8.77 +  H2S * 8.11 + C1 * 8.48 + C2 * 12.37 + C3 * 17.21 + iC4 * 22.61 + nC4 * 22.82 + iC5 * 27.74 + nC5 * 28.15 + C6 * 33.43 + C7 * 38.75 + C8 * 42.99 ) / 100;
+    var K = CP / (CP - 1.99);
+    var RP = Pressure/Pr;
+    var RT = (Temperature + 460)/Tr;
+    //var A = 1.39 * ((RT - 0.92)**0.5) - (0.36 * RT) - 0.10;
+    //var E = 9 * (RT - 1);
+    //var B = ((0.62 - (0.23 * RT)) * RP ) + (((0.066 /(RT - 0.86)) - 0.037) * RP**2) + ((0.32 * RP**2)/(10**E));
+    //var C = 0.132 - (0.32 * Math.log10(RT));  
+    //var F = 0.3106 - (0.49 * RT) + (0.1824 * RT**2); 
+   // var D = 10**F;
+   // var Z = A + ((1-A)/(Math.exp(B))) + (C * (RP**D));
+    var GUESS;
+    var B119; 
+    var Z_Z;
+    var diff; 
+    diff = Z_Z - GUESS;
+   // B119 = 0.27 * RP/(RT*GUESS);
+   Z_Z =(0.3265-1.07/RT-0.5339/RT**3-0.05165/RT**5)*B119+
+   (0.5475-0.7361/RT+0.1884/RT**2)*B119**2-0.1056*
+   (-0.7361/RT+0.1884/RT**2)*B119**5+0.6134*(1+0.721*B119**2)
+   *B119**2/RT**3*Math.exp(-0.721*B119**2)+1;
+    
+    for (GUESS = 0.5;  GUESS < 1.2; GUESS=GUESS+0.001){
+                
+        B119 = 0.27 * RP/(RT*GUESS);
+        Z_Z =(0.3265-1.07/RT-0.5339/RT**3-0.05165/RT**5)*B119+
+   (0.5475-0.7361/RT+0.1884/RT**2)*B119**2-0.1056*
+   (-0.7361/RT+0.1884/RT**2)*B119**5+0.6134*(1+0.721*B119**2)
+   *B119**2/RT**3*Math.exp(-0.721*B119**2)+1;
+   if(Z_Z - GUESS < 0.001) break
+          
+            
+    }
+    
+    {
+        document.getElementById("z1").value=total.toFixed(2); 
+        document.getElementById("z2").value=MW.toFixed(2);
+        document.getElementById("z3").value=SG.toFixed(2); 
+        document.getElementById("z4").value=K.toFixed(2);
+
+        document.getElementById("z8").value=Z_Z.toFixed(3);
+    }
+} 
+</script>
+</body>
+</html>

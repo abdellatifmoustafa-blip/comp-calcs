@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+
+
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.accordion {
+  font-family: 'Vollkorn', serif;  
+  background-color: rgb(220, 231, 15);
+  color: rgb(233, 225, 6);
+  cursor: pointer;
+  padding: 18px;
+  height: 80px;
+  width: 100%;
+  border: 3px outset #888;
+  text-align: center;
+  outline: none;
+  font-size: 45px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #999;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  background:linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:  rgb(7, 36, 54);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+    background-image: linear-gradient(lightgray 0%, white 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3pxgraya;}
+   .accordion:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border: 3px outset #ddd;
+  color:black;
+  background: linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;}
+
+  .btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+.button2 {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}
+
+@media (max-width: 900px) {
+.accordion  { font-size: 25px;} }
+.panel {
+padding: 0 18px;
+display: none;
+background-color: white;
+overflow: hidden;
+}
+
+#reset {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+
+
+
+button {   
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}   
+
+    </style>  
+
+</head>
+<body>
+    
+  <button4 style="text-align: center; width:100%" class="accordion">Liquid Pressure Drop Through Pipe</button4>
+  <div class="panel"><br><br>
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button>
+    </div>
+  
+  
+  
+  <div id="myDIV">
+      <form>  
+        <span>Beta ratio is the ratio of the orifice bore diameter divided by the pipe inside diameter.<br>
+            Typical Beta ratio is around 0.3 - 0.7.
+            
+        </span><br>  
+              
+  </form>
+    </div>
+    <div class="wrap">
+    <div class="left">
+      <div class="ident">
+        <div class="layout">
+            <div class="layout-heading">
+               <div class="layout-tools"></div>
+            </div>
+              <div class="layout-body">
+                  <form role="form">            						
+    <div class="wrapper"> 
+    <div class="inputProcess">Input process Data</div><br><br>  
+
+
+    <label class="label">Mass flow</label>
+    <div class="combine">
+    <input type="text" class="boxes" id="m" value="61528">
+    <div class="combine-addon">
+        <div class="drop-down-class">
+          <select class="first" id="input4Type">
+            <option value="lb/hr">lb/hr</option>
+            <option value="kg/hr">kg/hr</option>
+    </select> 
+    </div></div></div></div> 
+
+    <div class="wrapper">
+        <label class="label">Density</label>
+        <div class="combine">
+        <input type="text" class="boxes" id="d" value="46.1">
+        <div class="combine-addon">
+            <div class="drop-down-class">
+              <select class="first" id="input5Type">
+                <option value="lb/ft3">lb/ft3</option>
+    <option value="kg/m3">kg/m3</option>
+        </select> 
+        </div></div></div></div>
+
+
+<div class="wrapper">
+<label class="label">Roughness</label>
+<div class="combine">
+<input type="text" class="boxes" id="r" value="0.0018">
+<div class="combine-addon">
+<div class="drop-down-class">
+    <select class="first" id="input6Type">
+        <option value="in">in</option>
+        <option value="mm">mm</option>
+    </select> 
+    </div></div></div></div>
+
+    <div class="wrapper">
+<label class="label">Viscosity, cP</label>
+<input type="text" class="boxes" id="v" value="0.55">
+</div> 
+
+<div class="wrapper">
+    <label class="label">Friction factor</label>
+    <input type="text" class="boxes" id="ff" value="0.023">
+</div>
+
+
+
+<div class="wrapper">
+    <label class="label">Pipe size</label>
+        <select class="boxes" id="pipeid">
+    <option value='1" sch. 40(STD)'>1" (25 mm) sch. 40(STD)</option>
+    <option value='1" sch. 80(XS)'>1" (25 mm) sch. 80(XS)</option>
+    <option value='1" sch. 160'>1" (25 mm) sch. 160</option>
+    <option value='1" sch. XXS'>1" (25 mm) sch. XXS</option>
+    <option value='1-1/2" sch. 40(STD)'>1-1/2" (40 mm) sch. 40(STD)</option>
+    <option value='1-1/2" sch. 80(XS)'>1-1/2" (40 mm) sch. 80(XS)</option>
+    <option value='1-1/2" sch. 160'>1-1/2" (40 mm) sch. XXS</option>
+    <option value='1-1/2" sch. XXS'>1-1/2" (40 mm) sch. XXS</option>
+    <option value='2" sch. 40(STD)'>2" (50 mm) sch. 40(STD)</option>
+    <option value='2" sch. 80(XS)'>2" (50 mm) sch. 80(XS)</option>
+    <option value='2" sch. 160'>2" (50 mm) sch. 160</option>
+    <option value='2" sch. XXS'>2" (50 mm) sch. XXS</option>
+    <option value='3" sch. 40(STD)'>3" (80 mm) sch. 40(STD)</option>
+    <option value='3" sch. 80(XS)'>3" (80 mm) sch. 80(XS)</option>
+    <option value='3" sch. 160'>3" (80 mm) sch. 160</option>
+    <option value='3" sch. XXS'>3" (80 mm) sch. XXS</option>
+    <option value='4" sch. 40(STD)'>4" (100 mm) sch. 40(STD)</option>
+    <option value='4" sch. 80(XS)'>4" (100 mm) sch. 80(XS)</option>
+    <option value='4" sch. 120'>4" (100 mm) sch. 120</option>
+    <option value='4" sch. 160'>4" (100 mm) sch. 160</option>
+    <option value='4" sch. XXS'>4" (100 mm) sch. XXS</option>
+    <option value='6" sch. 40(STD)'>6" (150 mm) sch. 40(STD)</option>
+    <option value='6" sch. 80(XS)'>6" (150 mm) sch. 80(XS)</option>
+    <option value='6" sch. 120'>6" (150 mm) sch. 120</option>
+    <option value='6" sch. 160'>6" (150 mm) sch. 160</option>
+    <option value='6" sch. XXS'>6" (150 mm) sch. XXS</option>
+    <option value='8" sch. 40(STD)'>8" (200 mm) sch. 40(STD)</option>
+    <option value='8" sch. 80(XS)'>8" (200 mm) sch. 80(XS)</option>
+    <option value='8" sch. 120'>8" (200 mm) sch. 120</option>
+    <option value='8" sch. XXS'>8" (200 mm) sch. XXS</option>
+    <option value='8" sch. 160'>8" (200 mm) sch. 160</option>
+    <option value='10" sch. 40(STD)'>10" (250 mm) sch. 40(STD)</option>
+    <option value='10" sch. 60(XS)'>10" (250 mm) sch. 60(XS)</option>
+    <option value='10" sch. 80'>10" (250 mm) sch. 80</option>
+    <option value='10" sch. 120'>10" (250 mm) sch. 120</option>
+    <option value='10" sch. 140(XXS)'>10" (250 mm) sch. 140(XXS)</option>
+    <option value='10" sch. 160'>10" (250 mm) sch. 160</option>
+    <option value='12" sch. STD'>12" (300 mm) sch. STD</option>
+    <option value='12" sch. 40'>12" (300 mm) sch. 40</option>
+    <option value='12" sch. XS'>12" (300 mm) sch. XS</option>
+    <option value='12" sch. 80'>12" (300 mm) sch. 80</option>
+    <option value='12" sch. 120(XXS)'>12" (300 mm) sch. 120(XXS)</option>
+    <option value='12" sch. 160'>12" (300 mm) sch. 160</option>
+    <option value='14" sch. 30(STD)'>14" (350 mm) sch. 30(STD)</option>
+    <option value='14" sch. 40'>14" (350 mm) sch. 40</option>
+    <option value='14" sch. XS'>14" (350 mm) sch. XS</option>
+    <option value='14" sch. 80'>14" (350 mm) sch. 80</option>
+    <option value='14" sch. 120'>14" (350 mm) sch. 120</option>
+    <option value='14" sch. 160'>14" (350 mm) sch. 160</option>
+    <option value='16" sch. 30(STD)'>16" (400 mm) sch. 30(STD)</option>
+    <option value='16" sch. 40(XS)'>16" (400 mm) sch. 40(XS)</option>
+    <option value='16" sch. 80'>16" (400 mm) sch. 80</option>
+    <option value='16" sch. 120'>16" (400 mm) sch. 120</option>
+    <option value='16" sch. 160'>16" (400 mm) sch. 160</option>
+    <option value='18" sch. STD'>18" (450 mm) sch. STD</option>
+    <option value='18" sch. XS'>18" (450 mm) sch. XS</option>
+    <option value='18" sch. 40'>18" (450 mm) sch. 40</option>
+    <option value='18" sch. 80'>18" (450 mm) sch. 80</option>
+    <option value='18" sch. 120'>18" (450 mm) sch. 120</option>
+    <option value='18" sch. 160'>18" (450 mm) sch. 160</option>
+    <option value='20" sch. 20(STD)'>20" (500 mm) sch. 20(STD)</option>
+    <option value='20" sch. 30(XS)'>20" (500 mm) sch. 30(XS)</option>
+    <option value='20" sch. 40'>20" (500 mm) sch. 40</option>
+    <option value='20" sch. 80'>20" (500 mm) sch. 80</option>
+    <option value='20" sch. 120'>20" (500 mm) sch. 120</option>
+    <option value='20" sch. 160'>20" (500 mm) sch. 160</option>
+    <option value='24" sch. 20(STD)'>24" (600 mm) sch. 20(STD)</option>
+    <option value='24" sch. XS'>24" (600 mm) sch. XS</option>
+    <option value='24" sch. 30'>24" (600 mm) sch. 30</option>
+    <option value='24" sch. 40'>24" (600 mm) sch. 40</option>
+    <option value='24" sch. 80'>24" (600 mm) sch. 80</option>
+    <option value='24" sch. 120'>24" (600 mm) sch. 120</option>
+    <option value='24" sch. 160'>24" (600 mm) sch. 160</option>
+</select>
+</div> 
+
+
+</form>
+</div>
+</div>
+</div>
+
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+ <div class="wrapper"></div>
+
+ <button class="button2" onclick="calculate()">Result</button><br><br>
+
+
+ <label class="label">Pressure Drop</label>
+ <input type="text" class="boxes" id="ans1" disabled><br>
+ 
+ <label class="label">Fluid velocity</label>
+ <input type="text" class="boxes" id="ans2" disabled><br>
+ 
+ <label class="label">Reynold's Number</label>
+ <input type="text" class="boxes" id="ans3" disabled>
+ 
+ </div></div></div></div> 
+   
+        
+
+</div>
+ 
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function calculate () {   
+
+
+
+var pipeid = document.getElementById('pipeid').value;
+var dia;
+var c2;
+
+if(pipeid === '1" sch. 40(STD)' ){
+    dia = 1.049; c2 = 5950; }
+    else if (pipeid === '1" sch. 80(XS)' ){
+     dia = 0.957; c2 = 9640; }
+     else if (pipeid === '1" sch. 160' ){
+     dia = 0.815; c2 = 22500; }
+     else if (pipeid === '1" sch. XXS' ){
+     dia = 0.599; c2 = 114100; }
+
+     if(pipeid === '1-1/2" sch. 40(STD)' ){
+    dia = 1.61; c2 = 627; }
+    else if (pipeid === '1-1/2" sch. 80(XS)' ){
+     dia = 1.5; c2 = 904; }
+     else if (pipeid === '1-1/2" sch. 160' ){
+     dia = 1.338; c2 = 1656; }
+     else if (pipeid === '1-1/2" sch. XXS' ){
+     dia = 1.1; c2 = 4630; }
+
+     if(pipeid === '2" sch. 40(STD)' ){
+    dia = 2.067; c2 = 169; }
+    else if (pipeid === '2" sch. 80(XS)' ){
+     dia = 1.939; c2 = 488; }
+     else if (pipeid === '2" sch. 160' ){
+     dia = 1.687; c2 = 488; }
+     else if (pipeid === '2" sch. XXS' ){
+     dia = 1.1; c2 = 4630; }
+
+     if(pipeid === '3" sch. 40(STD)' ){
+    dia = 3.068; c2 = 21.4; }
+    else if (pipeid === '3" sch. 80(XS)' ){
+     dia = 2.9; c2 = 28.7; }
+     else if (pipeid === '3" sch. 160' ){
+     dia = 2.624; c2 = 48.3; }
+     else if (pipeid === '3" sch. XXS' ){
+     dia = 2.3; c2 = 96.6; }
+
+
+     if(pipeid === '4" sch. 40(STD)' ){
+    dia = 4.026; c2 = 5.17; }
+    else if (pipeid === '4" sch. 80(XS)' ){
+     dia = 3.826; c2 = 6.75; }
+     else if (pipeid === '4" sch. 120' ){
+     dia = 3.624; c2 = 8.94; }
+     else if (pipeid === '4" sch. 160' ){
+     dia = 3.438; c2 = 11.8; }
+     else if (pipeid === '4" sch. XXS' ){
+     dia = 3.152; c2 = 18.59; }
+
+     if(pipeid === '6" sch. 40(STD)' ){
+    dia = 6.065; c2 = 0.64; }
+    else if (pipeid === '6" sch. 80(XS)' ){
+     dia = 5.761; c2 = 0.79; }
+     else if (pipeid === '6" sch. 120' ){
+     dia = 5.501; c2 = 1.015; }
+     else if (pipeid === '6" sch. 160' ){
+     dia = 5.187; c2 = 1.376; }
+     else if (pipeid === '6" sch. XXS' ){
+     dia = 4.897; c2 = 1.861; }
+
+     if(pipeid === '8" sch. 40(STD)' ){
+    dia = 7.981; c2 = 0.146; }
+    else if (pipeid === '8" sch. 80(XS)' ){
+     dia = 7.625; c2 = 0.185; }
+     else if (pipeid === '8" sch. 120' ){
+     dia = 7.187; c2 = 0.252; }
+     else if (pipeid === '8" sch. XXS' ){
+     dia = 6.875; c2 = 0.317; }
+     else if (pipeid === '8" sch. 160' ){
+     dia = 6.813; c2 = 0.333; }
+
+     if(pipeid === '10" sch. 40(STD)' ){
+    dia = 10.02; c2 = 0.04470; }
+    else if (pipeid === '10" sch. 60(XS)' ){
+     dia = 9.75; c2 = 0.05140; }
+     else if (pipeid === '10" sch. 80' ){
+     dia = 9.562; c2 = 0.05690; }
+     else if (pipeid === '10" sch. 120' ){
+     dia = 9.062; c2 = 0.0753; }
+     else if (pipeid === '10" sch. 140(XXS)' ){
+     dia = 8.75; c2 = 0.09050; }
+     else if (pipeid === '10" sch. 160' ){
+     dia = 8.5; c2 = 0.10520; }
+
+
+     if(pipeid === '12" sch. STD' ){
+    dia = 12; c2 = 0.01750; }
+    else if (pipeid === '12" sch. 40' ){
+     dia = 11.938; c2 = 0.01800; }
+     else if (pipeid === '12" sch. XS' ){
+     dia = 11.75; c2 = 0.01950; }
+     else if (pipeid === '12" sch. 80' ){
+     dia = 11.374; c2 = 0.02310; }
+     else if (pipeid === '12" sch. 120(XXS)' ){
+     dia = 10.75; c2 = 0.03100; }
+     else if (pipeid === '12" sch. 160' ){
+     dia = 10.126; c2 = 0.0423; }
+
+     if(pipeid === '14" sch. 30(STD)' ){
+    dia = 13.25; c2 = 0.01046; }
+    else if (pipeid === '14" sch. 40' ){
+     dia = 13.124; c2 = 0.01099; }
+     else if (pipeid === '14" sch. XS' ){
+     dia = 13; c2 = 0.01155; }
+     else if (pipeid === '14" sch. 80' ){
+     dia = 12.5; c2 = 0.01416; }
+     else if (pipeid === '14" sch. 120' ){
+     dia = 11.812; c2 = 0.01190; }
+     else if (pipeid === '14" sch. 160' ){
+     dia = 11.188; c2 = 0.02520; }
+
+     if(pipeid === '16" sch. 30(STD)' ){
+    dia = 15.25; c2 = 0.00504; }
+    else if (pipeid === '16" sch. 40(XS)' ){
+     dia = 15; c2 = 0.00549; }
+     else if (pipeid === '16" sch. 80' ){
+     dia = 14.312; c2 = 0.00700; }
+     else if (pipeid === '16" sch. 120' ){
+     dia = 13.562; c2 = 0.00926; }
+     else if (pipeid === '16" sch. 160' ){
+     dia = 12.812; c2 = 0.01244; }
+    
+     if(pipeid === '18" sch. STD' ){
+    dia = 17.25; c2 = 0.00266; }
+    else if (pipeid === '18" sch. XS' ){
+     dia = 17; c2 = 0.00287; }
+     else if (pipeid === '18" sch. 40' ){
+     dia = 16.876; c2 = 0.00298; }
+     else if (pipeid === '18" sch. 80' ){
+     dia = 16.124; c2 = 0.00376; }
+     else if (pipeid === '18" sch. 120' ){
+     dia = 15.25; c2 = 0.00504; }
+     else if (pipeid === '18" sch. 160' ){
+     dia = 14.438; c2 = 0.00669; }
+
+     if(pipeid === '20" sch. 20(STD)' ){
+    dia = 19.25; c2 = 0.00150; }
+    else if (pipeid === '20" sch. 30(XS)' ){
+     dia = 19; c2 = 0.00161; }
+     else if (pipeid === '20" sch. 40' ){
+     dia = 18.812; c2 = 0.00169; }
+     else if (pipeid === '20" sch. 80' ){
+     dia = 17.938; c2 = 0.00217; }
+     else if (pipeid === '20" sch. 120' ){
+     dia = 17; c2 = 0.00287; }
+     else if (pipeid === '20" sch. 160' ){
+     dia = 16.062; c2 = 0.00385; }
+
+     if(pipeid === '24" sch. 20(STD)' ){
+    dia = 23.25; c2 = 0.00057; }
+    else if (pipeid === '24" sch. XS' ){
+     dia = 23; c2 = 0.00060; }
+     else if (pipeid === '24" sch. 30' ){
+     dia = 22.876; c2 = 0.00061; }
+     else if (pipeid === '24" sch. 40' ){
+     dia = 22.624; c2 = 0.00065; }
+     else if (pipeid === '24" sch. 80' ){
+     dia = 21.562; c2 = 0.00084; }
+     else if (pipeid === '24" sch. 120' ){
+     dia = 20.376; c2 = 0.00112; }
+     else if (pipeid === '24" sch. 160' ){
+     dia = 19.312; c2 = 0.00148; }
+
+
+var m = parseFloat(document.getElementById('m').value);
+var input4Type = document.getElementById('input4Type').value;
+
+if(input4Type === "lb/hr" ){
+   m = m * 1;
+}else if(input4Type === "kg/hr" ){
+    m = m / 0.454 ;
+}
+
+
+var d = parseFloat(document.getElementById('d').value);
+var input5Type = document.getElementById('input5Type').value;
+
+if(input5Type === "lb/ft3" ){
+        d = d * 1;
+    }else if(input5Type === "kg/m3" ){
+        d = d * 0.0624;
+    }
+ 
+var r = parseFloat(document.getElementById('r').value);
+var input6Type = document.getElementById('input6Type').value;
+
+if(input6Type === "in" ){
+        r = r * 1;
+    }else if(input6Type === "mm" ){
+        r = r / 25.4;
+    }  
+
+    var v = parseFloat(document.getElementById('v').value);
+    var ff = parseFloat(document.getElementById('ff').value);
+
+    var re = (m*6.31)/(dia*v);
+    var ed = r/dia;
+
+    var dp = ((0.000336)*ff*m*m)/((dia**5)*d);
+    var dp_k = dp * 22.62059;
+    var vel = (0.0509*m)/((dia**2)*d);
+    var vel_m = vel * 0.305;
+    var flow;
+    if (re > 2000){flow="Turbulent flow";}
+    else {flow = "Laminar flow";}
+ 
+    
+    {
+        
+        document.getElementById("ans1").value=dp.toFixed(1)+' psi/100ft'+" ("+dp_k.toFixed(1)+" kPa/100m)";
+        document.getElementById("ans2").value=vel.toFixed(1)+' ft/sec'+" ("+vel_m.toFixed(1)+" m/sec)";
+        document.getElementById("ans3").value=re.toFixed(0).toString()+" ("+flow+")";
+        
+    //   document.getElementById("ans1").value=re.toFixed(1)+" ("+pdmetric.toFixed(1)+")";
+    }
+}
+</script>
+</body>
+</html>

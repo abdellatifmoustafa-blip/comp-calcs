@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+.button2 {
+    background-color: lightblue; 
+  border: 1px solid blue;
+  color: black;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 32px;
+}
+
+#reset {
+    background-color: lightblue; 
+  border: 1px solid blue;
+  color: black;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 32px;
+}
+
+
+button {   
+height: 30px;
+  width: 180px;
+  display: inline-flex;
+  background: lightblue;
+  color: black;
+  text-align: center;
+  font-size: 100%;
+  text-align: center;
+  padding-left: 15px;
+  padding-top: 5px;
+  border: 1px solid blue;
+           
+}    
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.btn{
+font-size: 25px;
+background-color: lightblue;
+color: black;
+border: 1px solid blue;
+padding: 9px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  margin-bottom: 40px;
+  height: 40px;
+  border: 1px solid blue;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}   
+#panel, .flip {
+    width: 200X;
+    display: block;
+    background: white;
+    color: black;
+    text-align: justify;
+    font-size: 100%;
+}
+
+#panel {
+    width: 200X;
+    display: none;
+}
+
+</style>   
+
+</head>
+<body>
+    <img src="logo10.png" style="margin-left:30px" width=150 height="50">
+    <h1 style="text-align: center; color: black;">Reciprocating Compressor Cylinders lube Oil Consumption</h1>
+      
+  
+    <div class="container">
+      <button class ="btn" onclick="myFunction1()"> Read Me </button>
+      </div>
+    
+    
+    
+    <div id="myDIV">
+        <form> 
+
+     
+    <span>The calculation helps to estimate Cylindres lube oil consumption in reciprocating compressors.<br>
+    Default is based on fixed lube rate of 0.008 L/day/mm of bore diameter with multiplier.<br>
+    Check the Compressor manufacturer lube rate and change the default as required.<br>
+    Cylindres Lubrication break-in rate can be as higher 150% - 200% (Check the Compressor manufacturer manual).
+    </span><br> 
+
+  
+</form>
+</div>
+
+<div class="wrap">
+    <div class="left">
+       <div class="ident">
+         <div class="layout">
+             <div class="layout-heading">
+                <div class="layout-tools"></div>
+             </div>
+               <div class="layout-body">
+                   <form role="form">            						
+                      <div class="wrapper">
+                           <div class="inputProcess">Input Cylinders Data</div><br><br>
+
+      
+      <label class="control-label">Number of Cylindres (max 6)</label>
+      <input type="text" class="boxes" id="cyl" value="4">
+  </div>   
+                           
+
+   <div class="wrapper">                       
+    <label class="label">Frame rod diameter</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="dia" value="2.5">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input1Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+
+<div class="wrapper">
+    <label class="label">Cylindre #1 - Bore</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="c1" value="17.875">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input2Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+
+<div class="wrapper">
+    <label class="label">Cylindre #2 - Bore</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="c2" value="17.875">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input3Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+<div class="wrapper">
+    <label class="label">Cylindre #3 - Bore</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="c3" value="17.875">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input4Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+<div class="wrapper">
+    <label class="label">Cylindre #4 - Bore</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="c4" value="15">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input5Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+<div class="wrapper">
+    <label class="label">Cylindre #5 - Bore</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="c5" value="15">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input6Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+<div class="wrapper">
+    <label class="label">Cylindre #6 - Bore</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="c6" value="15">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+  <select class="first" id="input7Type">
+    <option value="in">in</option>
+    <option value="mm">mm</option>
+                    </select>
+</div></div></div></div>
+
+<div class="wrapper">
+    <label class="control-label">Base lube rate</label>
+    <input type="text" class="boxes" id="lr" value="0.008">
+</div> 
+</form>
+</div>
+</div>
+</div>
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+ <div class="wrapper">
+
+    <button class="button2" onclick="calculate()">Result</button><br><br>
+    <label class="label">Cylinder Lubrication Rate, L/day (USG)</label>
+    <input type="text" class="boxes" id="ans8" disabled>
+ </div>
+
+
+</div></div></div></div>
+     
+<script>
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function calculate (){
+    
+    var dia = parseFloat(document.getElementById('dia').value);  
+     
+    var input1Type = document.getElementById('input1Type').value;
+    if(input1Type === "in" ){
+        dia = dia * 1;
+    }else if(input1Type === "mm" ){
+        dia = dia * 0.0394;
+    }
+
+    var c1 = parseFloat(document.getElementById('c1').value);   
+    var input2Type = document.getElementById('input2Type').value;
+    if(input2Type === "in" ){
+        c1 = c1 * 1;
+    }else if(input2Type === "mm" ){
+        c1 = c1 * 0.0394;
+    }
+
+    var c2 = parseFloat(document.getElementById('c2').value);   
+    var input3Type = document.getElementById('input3Type').value;
+    if(input3Type === "in" ){
+        c2 = c2 * 1;
+    }else if(input3Type === "mm" ){
+        c2 = c2 * 0.0394;
+    }
+
+    var c3 = parseFloat(document.getElementById('c3').value);   
+    var input4Type = document.getElementById('input4Type').value;
+    if(input4Type === "in" ){
+        c3 = c3 * 1;
+    }else if(input4Type === "mm" ){
+        c3 = c3 * 0.0394;
+    }
+
+    var c4 = parseFloat(document.getElementById('c4').value);   
+    var input5Type = document.getElementById('input5Type').value;
+    if(input5Type === "in" ){
+        c4 = c4 * 1;
+    }else if(input5Type === "mm" ){
+        c4 = c4 * 0.0394;
+    }
+
+    var c5 = parseFloat(document.getElementById('c5').value);   
+    var input6Type = document.getElementById('input6Type').value;
+    if(input6Type === "in" ){
+        c5 = c5 * 1;
+    }else if(input6Type === "mm" ){
+        c5 = c5 * 0.0394;
+    }
+
+    var c6 = parseFloat(document.getElementById('c6').value);   
+    var input7Type = document.getElementById('input7Type').value;
+    if(input7Type === "in" ){
+        c6 = c6 * 1;
+    }else if(input7Type === "mm" ){
+        c6 = c6 * 0.0394;
+    }
+
+
+    
+    var lr = parseFloat(document.getElementById("lr").value);
+   var mp=1.3;
+    var cyl = parseFloat(document.getElementById("cyl").value);
+    
+
+    var cyl1 = (c1)*25.4*lr*mp;
+    var cyl2 = (c2)*25.4*lr*mp;
+    var cyl3 = (c3)*25.4*lr*mp;
+    var cyl4 = (c4)*25.4*lr*mp;
+    var cyl5 = (c5)*25.4*lr*mp;
+    var cyl6 = (c6)*25.4*lr*mp;
+    var rods = (cyl*2*dia)*25.4*lr*mp;
+    var lub = rods+cyl1+cyl2+cyl3+cyl4+cyl5+cyl6;
+    var lub_usg = lub * 0.264;
+    {
+     
+     
+        document.getElementById("ans8").value=lub.toFixed(1)+"Litres"+" ("+lub_usg.toFixed(1)+" USG)";
+       
+    }
+
+} 
+</script>
+</body>
+</html>

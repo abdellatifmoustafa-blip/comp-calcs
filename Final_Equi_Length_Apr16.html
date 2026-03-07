@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ #myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 0px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 70px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+@media (max-width: 900px) {
+     .para {
+    width: 45%;
+}}
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+  position: absolute;left: 15px;
+  margin-top: -30px;
+}
+.boxes {
+  display: block;
+  width: 50%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute; left: 17px;
+  margin-top: -10px;
+}
+.para {
+  display: inline;
+  width: 250px;
+  height: 30px;
+  padding: 6px 12px;
+  margin-top: -25px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;left: 20px;
+  
+}
+
+.parah {
+  display: inline;
+  width: 50px;
+  height: 30px;
+  padding: 0px 12px;
+  margin-top: -15px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 4px;
+  position: absolute;left: 20px;
+  
+}
+.quant {
+  display: inline;
+  width: 12%;
+  height: 30px;
+  padding: 6px 12px;
+  margin-top: -25px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;left: 280px;
+  text-align: center;
+  
+}
+.quanth {
+  display: inline;
+  width: 12%;
+  height: 30px;
+  padding: 0px 12px;
+  margin-top: -15px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border:none;
+  border-radius: 4px;
+  position: absolute;left: 280px;
+  text-align: center;
+  
+}
+.quant2 {
+  display: inline;
+  width: 14%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;left: 340px;
+  margin-top: -25px;
+}
+.quant2h {
+  display: inline;
+  width: 14%;
+  height: 30px;
+  padding: 0px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border:none;
+  border-radius: 4px;
+  position: absolute;left: 340px;
+  margin-top: -15px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+  
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+.button2 {
+    background-color: lightblue; 
+  border: 1px solid blue;
+  color: black;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 0px;
+  height: 32px;
+  border-radius: 4px;
+  width: 230px;
+}
+
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.btn{
+font-size: 25px;
+background-color: lightblue;
+color: black;
+border: 1px solid blue;
+padding: 9px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  margin-bottom: 40px;
+  height: 40px;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}   
+    </style>  
+
+</head>
+<body>
+     <img src="logo10.png" style="margin-left:30px" width=150 height="50">
+  <h1 style="text-align: center; color: black;">Equivalent pipe length for Fittings and Valves  </h1>
+    
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button><br><br>
+    </div>
+  
+  
+  
+  <div id="myDIV">
+      <form> 
+        span>The calculation helps to estimate the size of 
+        compressed air receiver for engine starting. <br/>
+     Example: The engine air starter works between max 
+     120 - 80 psig, and requires 1500 cfm 
+     for 15 sec per start.<br/>
+     Assume 3 start attempts. <br/>
+     The site air compressor capacity is 50 cfm<br/>
+     Result:<br/> 
+     Vessel volume 413 cu.ft<br/>
+     Vessel volume 3093 USG<br/>
+     Vessel size 5.6 ft ID x 16.8 S/S<br/>
+     Time required to fill up the receiver 22.6 min. <br/>
+     Round size to Next available standard size<br/>
+                
+ </span>
+ </form 
+</div>
+
+</div>
+<div class="wrap">
+   <div class="left">
+                 						
+  <div class="wrapper"> 
+    
+    <div class="wrapper">
+        <label class="label">Pipe size</label>
+            <select class="boxes" id="pipeid">
+
+    <option value='1" sch. 40(STD)'>1" sch. 40(STD)</option>
+    <option value='1" sch. 80(XS)'>1" sch. 80(XS)</option>
+    <option value='1" sch. 160'>1" sch. 160</option>
+    <option value='1" sch. XXS'>1" sch. XXS</option>
+    <option value='1-1/2" sch. 40(STD)'>1-1/2" sch. 40(STD)</option>
+    <option value='1-1/2" sch. 80(XS)'>1-1/2" sch. 80(XS)</option>
+    <option value='1-1/2" sch. 160'>1-1/2" sch. 40(STD)</option>
+    <option value='1-1/2" sch. XXS'>1-1/2" sch. 80(XS)</option>
+    <option value='2" sch. 40(STD)'>2" sch. 40(STD)</option>
+    <option value='2" sch. 80(XS)'>2" sch. 80(XS)</option>
+    <option value='2" sch. 160'>2" sch. 160</option>
+    <option value='2" sch. XXS'>2" sch. XXS</option>
+    <option value='3" sch. 40(STD)'>3" sch. 40(STD)</option>
+    <option value='3" sch. 80(XS)'>3" sch. 80(XS)</option>
+    <option value='3" sch. 160'>3" sch. 160</option>
+    <option value='3" sch. XXS'>3" sch. XXS</option>
+    <option value='4" sch. 40(STD)'>4" sch. 40(STD)</option>
+    <option value='4" sch. 80(XS)'>4" sch. 80(XS)</option>
+    <option value='4" sch. 120'>4" sch. 120</option>
+    <option value='4" sch. 160'>4" sch. 160</option>
+    <option value='4" sch. XXS'>4" sch. XXS</option>
+    <option value='6" sch. 40(STD)'>6" sch. 40(STD)</option>
+    <option value='6" sch. 80(XS)'>6" sch. 80(XS)</option>
+    <option value='6" sch. 120'>6" sch. 120</option>
+    <option value='6" sch. 160'>6" sch. 160</option>
+    <option value='6" sch. XXS'>6" sch. XXS</option>
+    <option value='8" sch. 40(STD)'>8" sch. 40(STD)</option>
+    <option value='8" sch. 80(XS)'>8" sch. 80(XS)</option>
+    <option value='8" sch. 120'>8" sch. 120</option>
+    <option value='8" sch. XXS'>8" sch. XXS</option>
+    <option value='8" sch. 160'>8" sch. 160</option>
+    <option value='10" sch. 40(STD)'>10" sch. 40(STD)</option>
+    <option value='10" sch. 60(XS)'>10" sch. 60(XS)</option>
+    <option value='10" sch. 80'>10" sch. 80</option>
+    <option value='10" sch. 120'>10" sch. 120</option>
+    <option value='10" sch. 140(XXS)'>10" sch. 140(XXS)</option>
+    <option value='10" sch. 160'>10" sch. 160</option>
+    <option value='12" sch. STD'>12" sch. STD</option>
+    <option value='12" sch. 40'>12" sch. 40</option>
+    <option value='12" sch. XS'>12" sch. XS</option>
+    <option value='12" sch. 80'>12" sch. 80</option>
+    <option value='12" sch. 120(XXS)'>12" sch. 120(XXS)</option>
+    <option value='12" sch. 160'>12" sch. 160</option>
+    <option value='14" sch. 30(STD)'>14" sch. 30(STD)</option>
+    <option value='14" sch. 40'>14" sch. 40</option>
+    <option value='14" sch. XS'>14" sch. XS</option>
+    <option value='14" sch. 80'>14" sch. 80</option>
+    <option value='14" sch. 120'>14" sch. 120</option>
+    <option value='14" sch. 160'>14" sch. 160</option>
+    <option value='16" sch. 30(STD)'>16" sch. 30(STD)</option>
+    <option value='16" sch. 40(XS)'>16" sch. 40(XS)</option>
+    <option value='16" sch. 80'>16" sch. 80</option>
+    <option value='16" sch. 120'>16" sch. 120</option>
+    <option value='16" sch. 160'>16" sch. 160</option>
+    <option value='18" sch. STD'>18" sch. STD</option>
+    <option value='18" sch. XS'>18" sch. XS</option>
+    <option value='18" sch. 40'>18" sch. 40</option>
+    <option value='18" sch. 80'>18" sch. 80</option>
+    <option value='18" sch. 120'>18" sch. 120</option>
+    <option value='18" sch. 160'>18" sch. 160</option>
+    <option value='20" sch. 20(STD)'>20" sch. 20(STD)</option>
+    <option value='20" sch. 30(XS)'>20" sch. 30(XS)</option>
+    <option value='20" sch. 40'>20" sch. 40</option>
+    <option value='20" sch. 80'>20" sch. 80</option>
+    <option value='20" sch. 120'>20" sch. 120</option>
+    <option value='20" sch. 160'>20" sch. 160</option>
+    <option value='24" sch. 20(STD)'>24" sch. 20(STD)</option>
+    <option value='24" sch. XS'>24" sch. XS</option>
+    <option value='24" sch. 30'>24" sch. 30</option>
+    <option value='24" sch. 40'>24" sch. 40</option>
+    <option value='24" sch. 80'>24" sch. 80</option>
+    <option value='24" sch. 120'>24" sch. 120</option>
+    <option value='24" sch. 160'>24" sch. 160</option>
+
+</select>	
+  
+</div>
+<div class="ident">
+  <div class="layout">
+      <div class="layout-heading">
+         <div class="layout-tools"></div>
+      </div>
+        <div class="layout-body">
+            <form role="form"> 
+
+
+
+<p class="parah">Fittings</p><p class="quanth">Qty</p><p class="quant2h">L/D</p>
+ <br><br><br>
+
+<p class="para">90° long radius elbow</p><input type="text" class="quant" id="f1" value="0">
+<input type="text" class="quant2" id="f11" value="20"> <br><br><br>
+
+<p class="para">45° long radius elbow</p><input type="text" class="quant" id="f2" value="0">
+<input type="text" class="quant2" id="f22" value="16"> <br><br><br>
+
+<p class="para">90° street radius</p><input type="text" class="quant" id="f3" value="0">
+<input type="text" class="quant2" id="f33" value="50"> <br><br><br>
+
+<p class="para">40° street radius</p><input type="text" class="quant" id="f4" value="0">
+<input type="text" class="quant2" id="f44" value="26"> <br><br><br>
+
+<p class="para"> 90° standard radius</p><input type="text" class="quant" id="f5" value="0">
+<input type="text" class="quant2" id="f55" value="30"> <br><br><br>
+
+<p class="para"> 40° standard radius</p><input type="text" class="quant" id="f6" value="0">
+<input type="text" class="quant2" id="f66" value="16"> <br><br><br>
+
+<p class="para"> Square corner elbow</p><input type="text" class="quant" id="f7" value="0">
+<input type="text" class="quant2" id="f77" value="57"> <br><br><br>
+<p class="para"> Standard tee - run</p><input type="text" class="quant" id="f8" value="0">
+<input type="text" class="quant2" id="f88" value="20"> <br><br><br>
+
+<p class="para"> Standard tee - branch</p><input type="text" class="quant" id="f9" value="0">
+<input type="text" class="quant2" id="f99" value="60"> <br><br><br>
+
+
+
+</form>
+</div>
+</div>
+</div>
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+
+
+  <p class="parah">Valves<p class="quanth">Qty</p><p class="quant2h">L/D</p>
+  <br><br><br>
+
+
+  <p class="para">Globe conventional fully open</p><input type="text" class="quant" id="v1" value="0">
+  <input type="text" class="quant2" id="v11" value="340"> <br><br><br>
+  
+  <p class="para">Globe Y pattern</p><input type="text" class="quant" id="v2" value="0">
+  <input type="text" class="quant2" id="v22" value="160"> <br><br><br>
+  
+  <p class="para">Globe angle pattern</p><input type="text" class="quant" id="v2" value="0">
+  <input type="text" class="quant2" id="v22" value="145"> <br><br><br>
+  
+  <p class="para">Gate conventional fully open</p><input type="text" class="quant" id="v3" value="0">
+  <input type="text" class="quant2" id="v33" value="13"> <br><br><br>
+  
+  <p class="para">Gate reduced bore</p><input type="text" class="quant" id="v3" value="0">
+  <input type="text" class="quant2" id="v33" value="65"> <br><br><br>
+
+  <p class="para"> Check swing</p><input type="text" class="quant" id="v4" value="0">
+  <input type="text" class="quant2" id="v44" value="135"> <br><br><br>
+  
+  <p class="para"> Check conventional swing</p><input type="text" class="quant" id="v4" value="0">
+  <input type="text" class="quant2" id="v44" value="135"> <br><br><br>
+
+  <p class="para"> Clearway in-line ball</p><input type="text" class="quant" id="v5" value="0">
+  <input type="text" class="quant2" id="v55" value="150"> <br><br><br>
+  
+  <p class="para"> Ball valve - fully open</p><input type="text" class="quant" id="v6" value="0">
+  <input type="text" class="quant2" id="v66" value="11"> <br><br><br>
+
+  <p class="para"> Ball valve - Reduced bore < 2" (50 mm)</p><input type="text" class="quant" id="v6" value="0">
+  <input type="text" class="quant2" id="v66" value="65"> <br><br><br>
+
+  <p class="para"> Ball valve - Reduced bore < 2" (50 mm)</p><input type="text" class="quant" id="v6" value="0">
+  <input type="text" class="quant2" id="v66" value="45"> <br><br><br>
+
+
+  <p class="para"> Butterfly 6in and up fully open</p><input type="text" class="quant" id="v7" value="0">
+  <input type="text" class="quant2" id="v77" value="20"> <br><br><br>
+ 
+
+
+
+
+
+
+
+
+
+
+        
+
+ <div class="wrapper">
+          <button class="button2" onclick="calculate()">Total Equivalent Length</button><br><br>
+           
+               
+          
+                           <input style="width: 230px; margin-left: 5px" type="text" class="boxes" id="ans1" disabled>
+                        </div>
+
+                      </div></div></div> 
+<script>
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function calculate () {   
+
+
+
+var pipeid = document.getElementById('pipeid').value;
+var dia;
+var c2;
+
+if(pipeid === '1" sch. 40(STD)' ){
+    dia = 1.049; c2 = 5950; }
+    else if (pipeid === '1" sch. 80(XS)' ){
+     dia = 0.957; c2 = 9640; }
+     else if (pipeid === '1" sch. 160' ){
+     dia = 0.815; c2 = 22500; }
+     else if (pipeid === '1" sch. XXS' ){
+     dia = 0.599; c2 = 114100; }
+
+     if(pipeid === '1-1/2" sch. 40(STD)' ){
+    dia = 1.61; c2 = 627; }
+    else if (pipeid === '1-1/2" sch. 80(XS)' ){
+     dia = 1.5; c2 = 904; }
+     else if (pipeid === '1-1/2" sch. 160' ){
+     dia = 1.338; c2 = 1656; }
+     else if (pipeid === '1-1/2" sch. XXS' ){
+     dia = 1.1; c2 = 4630; }
+
+     if(pipeid === '2" sch. 40(STD)' ){
+    dia = 2.067; c2 = 169; }
+    else if (pipeid === '2" sch. 80(XS)' ){
+     dia = 1.939; c2 = 488; }
+     else if (pipeid === '2" sch. 160' ){
+     dia = 1.687; c2 = 488; }
+     else if (pipeid === '2" sch. XXS' ){
+     dia = 1.1; c2 = 4630; }
+
+     if(pipeid === '3" sch. 40(STD)' ){
+    dia = 3.068; c2 = 21.4; }
+    else if (pipeid === '3" sch. 80(XS)' ){
+     dia = 2.9; c2 = 28.7; }
+     else if (pipeid === '3" sch. 160' ){
+     dia = 2.624; c2 = 48.3; }
+     else if (pipeid === '3" sch. XXS' ){
+     dia = 2.3; c2 = 96.6; }
+
+
+     if(pipeid === '4" sch. 40(STD)' ){
+    dia = 4.026; c2 = 5.17; }
+    else if (pipeid === '4" sch. 80(XS)' ){
+     dia = 3.826; c2 = 6.75; }
+     else if (pipeid === '4" sch. 120' ){
+     dia = 3.624; c2 = 8.94; }
+     else if (pipeid === '4" sch. 160' ){
+     dia = 3.438; c2 = 11.8; }
+     else if (pipeid === '4" sch. XXS' ){
+     dia = 3.152; c2 = 18.59; }
+
+     if(pipeid === '6" sch. 40(STD)' ){
+    dia = 6.065; c2 = 0.64; }
+    else if (pipeid === '6" sch. 80(XS)' ){
+     dia = 5.761; c2 = 0.79; }
+     else if (pipeid === '6" sch. 120' ){
+     dia = 5.501; c2 = 1.015; }
+     else if (pipeid === '6" sch. 160' ){
+     dia = 5.187; c2 = 1.376; }
+     else if (pipeid === '6" sch. XXS' ){
+     dia = 4.897; c2 = 1.861; }
+
+     if(pipeid === '8" sch. 40(STD)' ){
+    dia = 7.981; c2 = 0.146; }
+    else if (pipeid === '8" sch. 80(XS)' ){
+     dia = 7.625; c2 = 0.185; }
+     else if (pipeid === '8" sch. 120' ){
+     dia = 7.187; c2 = 0.252; }
+     else if (pipeid === '8" sch. XXS' ){
+     dia = 6.875; c2 = 0.317; }
+     else if (pipeid === '8" sch. 160' ){
+     dia = 6.813; c2 = 0.333; }
+
+     if(pipeid === '10" sch. 40(STD)' ){
+    dia = 10.02; c2 = 0.04470; }
+    else if (pipeid === '10" sch. 60(XS)' ){
+     dia = 9.75; c2 = 0.05140; }
+     else if (pipeid === '10" sch. 80' ){
+     dia = 9.562; c2 = 0.05690; }
+     else if (pipeid === '10" sch. 120' ){
+     dia = 9.062; c2 = 0.0753; }
+     else if (pipeid === '10" sch. 140(XXS)' ){
+     dia = 8.75; c2 = 0.09050; }
+     else if (pipeid === '10" sch. 160' ){
+     dia = 8.5; c2 = 0.10520; }
+
+
+     if(pipeid === '12" sch. STD' ){
+    dia = 12; c2 = 0.01750; }
+    else if (pipeid === '12" sch. 40' ){
+     dia = 11.938; c2 = 0.01800; }
+     else if (pipeid === '12" sch. XS' ){
+     dia = 11.75; c2 = 0.01950; }
+     else if (pipeid === '12" sch. 80' ){
+     dia = 11.374; c2 = 0.02310; }
+     else if (pipeid === '12" sch. 120(XXS)' ){
+     dia = 10.75; c2 = 0.03100; }
+     else if (pipeid === '12" sch. 160' ){
+     dia = 10.126; c2 = 0.0423; }
+
+     if(pipeid === '14" sch. 30(STD)' ){
+    dia = 13.25; c2 = 0.01046; }
+    else if (pipeid === '14" sch. 40' ){
+     dia = 13.124; c2 = 0.01099; }
+     else if (pipeid === '14" sch. XS' ){
+     dia = 13; c2 = 0.01155; }
+     else if (pipeid === '14" sch. 80' ){
+     dia = 12.5; c2 = 0.01416; }
+     else if (pipeid === '14" sch. 120' ){
+     dia = 11.812; c2 = 0.01190; }
+     else if (pipeid === '14" sch. 160' ){
+     dia = 11.188; c2 = 0.02520; }
+
+     if(pipeid === '16" sch. 30(STD)' ){
+    dia = 15.25; c2 = 0.00504; }
+    else if (pipeid === '16" sch. 40(XS)' ){
+     dia = 15; c2 = 0.00549; }
+     else if (pipeid === '16" sch. 80' ){
+     dia = 14.312; c2 = 0.00700; }
+     else if (pipeid === '16" sch. 120' ){
+     dia = 13.562; c2 = 0.00926; }
+     else if (pipeid === '16" sch. 160' ){
+     dia = 12.812; c2 = 0.01244; }
+    
+     if(pipeid === '18" sch. STD' ){
+    dia = 17.25; c2 = 0.00266; }
+    else if (pipeid === '18" sch. XS' ){
+     dia = 17; c2 = 0.00287; }
+     else if (pipeid === '18" sch. 40' ){
+     dia = 16.876; c2 = 0.00298; }
+     else if (pipeid === '18" sch. 80' ){
+     dia = 16.124; c2 = 0.00376; }
+     else if (pipeid === '18" sch. 120' ){
+     dia = 15.25; c2 = 0.00504; }
+     else if (pipeid === '18" sch. 160' ){
+     dia = 14.438; c2 = 0.00669; }
+
+     if(pipeid === '20" sch. 20(STD)' ){
+    dia = 19.25; c2 = 0.00150; }
+    else if (pipeid === '20" sch. 30(XS)' ){
+     dia = 19; c2 = 0.00161; }
+     else if (pipeid === '20" sch. 40' ){
+     dia = 18.812; c2 = 0.00169; }
+     else if (pipeid === '20" sch. 80' ){
+     dia = 17.938; c2 = 0.00217; }
+     else if (pipeid === '20" sch. 120' ){
+     dia = 17; c2 = 0.00287; }
+     else if (pipeid === '20" sch. 160' ){
+     dia = 16.062; c2 = 0.00385; }
+
+     if(pipeid === '24" sch. 20(STD)' ){
+    dia = 23.25; c2 = 0.00057; }
+    else if (pipeid === '24" sch. XS' ){
+     dia = 23; c2 = 0.00060; }
+     else if (pipeid === '24" sch. 30' ){
+     dia = 22.876; c2 = 0.00061; }
+     else if (pipeid === '24" sch. 40' ){
+     dia = 22.624; c2 = 0.00065; }
+     else if (pipeid === '24" sch. 80' ){
+     dia = 21.562; c2 = 0.00084; }
+     else if (pipeid === '24" sch. 120' ){
+     dia = 20.376; c2 = 0.00112; }
+     else if (pipeid === '24" sch. 160' ){
+     dia = 19.312; c2 = 0.00148; }
+
+     var f1 = parseFloat(document.getElementById('f1').value);
+     var f11 = parseFloat(document.getElementById('f11').value);
+     var f2 = parseFloat(document.getElementById('f2').value);
+     var f22 = parseFloat(document.getElementById('f22').value);
+     var f3 = parseFloat(document.getElementById('f3').value);
+     var f33 = parseFloat(document.getElementById('f33').value);
+     var f4 = parseFloat(document.getElementById('f4').value);
+     var f44 = parseFloat(document.getElementById('f44').value);
+     var f5 = parseFloat(document.getElementById('f5').value);
+     var f55 = parseFloat(document.getElementById('f55').value);
+     var f6 = parseFloat(document.getElementById('f6').value);
+     var f66 = parseFloat(document.getElementById('f66').value);
+     var f7 = parseFloat(document.getElementById('f7').value);
+     var f77 = parseFloat(document.getElementById('f77').value);
+     var f8 = parseFloat(document.getElementById('f8').value);
+     var f88 = parseFloat(document.getElementById('f88').value);
+     var f9 = parseFloat(document.getElementById('f9').value);
+     var f99 = parseFloat(document.getElementById('f99').value);
+
+
+
+     var v1 = parseFloat(document.getElementById('v1').value);
+     var v11 = parseFloat(document.getElementById('v11').value);
+     var v2 = parseFloat(document.getElementById('v2').value);
+     var v22 = parseFloat(document.getElementById('v22').value);
+     var v3 = parseFloat(document.getElementById('v3').value);
+     var v33 = parseFloat(document.getElementById('v33').value);
+     var v4 = parseFloat(document.getElementById('v4').value);
+     var v44 = parseFloat(document.getElementById('v44').value);
+     var v5 = parseFloat(document.getElementById('v5').value);
+     var v55 = parseFloat(document.getElementById('v55').value);
+     var v6 = parseFloat(document.getElementById('v6').value);
+     var v66 = parseFloat(document.getElementById('v66').value);
+     var v7 = parseFloat(document.getElementById('v7').value);
+     var v77 = parseFloat(document.getElementById('v77').value);
+     
+    
+    var ldf = f1*f11*dia/12 + f2*f22*dia/12+f3*f33*dia/12+f4*f44*dia/12+f5*f55*dia/12+f6*f66*dia/12+f7*f77*dia/12+f8*f88*dia/12+f9*f99*dia/12;                                                  
+    var ldv = v1* v11 *dia/12+ v2*v22*dia/12+v3*v33*dia/12+v4*v44*dia/12+v5*v55*dia/12+v6*v66*dia/12+v7*v77*dia/12; 
+    var tel = ldf+ldv;
+    var tel_m = tel / 3.281;
+   
+        
+        
+        document.getElementById("ans1").value=tel.toFixed(1)+" ft "+" ("+tel_m.toFixed(0)+" m)";
+        
+    //   document.getElementById("ans1").value=re.toFixed(1)+" ("+pdmetric.toFixed(1)+")";
+    }
+
+</script>
+</body>
+</html>

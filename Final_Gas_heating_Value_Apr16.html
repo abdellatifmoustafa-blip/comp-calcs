@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+
+
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.accordion {
+  font-family: 'Vollkorn', serif;  
+  background-color: rgb(220, 231, 15);
+  color: rgb(233, 225, 6);
+  cursor: pointer;
+  padding: 18px;
+  height: 80px;
+  width: 100%;
+  border: 3px outset #888;
+  text-align: center;
+  outline: none;
+  font-size: 45px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #999;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  background:linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:  rgb(7, 36, 54);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+    background-image: linear-gradient(lightgray 0%, white 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3pxgraya;}
+   .accordion:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border: 3px outset #ddd;
+  color:black;
+  background: linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;}
+
+  .btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+.button2 {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}
+
+@media (max-width: 900px) {
+.accordion  { font-size: 25px;} }
+.panel {
+padding: 0 18px;
+display: none;
+background-color: white;
+overflow: hidden;
+}
+
+#reset {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+
+
+
+button {   
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}   
+   
+        table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 900px) {
+  table {
+    width: 80%;}}
+
+    .arrow {
+        float: right;
+        width: 0px;
+        height: 0px;
+        margin-top: 23px;
+        border: 10px solid transparent;
+        margin-top: 21px;
+        border-top-color: #F3F3F3;
+        }
+
+        input::-webkit-calendar-picker-indicator{
+            opacity: 100;
+            
+        } 
+</style>   
+
+
+<body>
+
+ 
+           
+  <button4 style="text-align: center; width:100%" class="accordion">Gas Heating Value </button4>
+  <div class="panel"><br><br>
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button>
+    </div>
+  
+  
+  
+  <div id="myDIV">
+      <form> 
+
+     
+    <span>The calculation gives heating values of hydrocarbons in Btu/ft3 (kj/m3).<br>
+    LHV - Lower Heating Value - the products of combustion contains the water vapor and the heat in the water vapor is not recovered.<br>
+    HHV - Higher Heating Value - the water of combustion is entirely condensed and the heat contained in the water vapor is recovered.
+      
+               
+</span>
+</form>
+</div>
+
+<div class="wrap">
+  <div class="left">
+      <div class="ident">
+        <div class="layout">
+            <div class="layout-heading">
+               <div class="layout-tools"></div>
+            </div>
+              <div class="layout-body">
+                  <form role="form">
+      
+
+
+                    <div class="wrapper">
+                        <label class="label">Methane (C1), Mole% </label>
+                        <input type="text" class="boxes" id="C1" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">Ethane (C2), Mole% </label>
+                        <input type="text" class="boxes" id="C2" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">Propane (C3), Mole% </label>
+                        <input type="text" class="boxes" id="C3" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">Isobutane (iC4), Mole% </label>
+                        <input type="text" class="boxes" id="iC4" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">n-Butane (nC4), Mole% </label>
+                        <input type="text" class="boxes" id="nC4" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">Isopentane (iC5), Mole%</label>
+                        <input type="text" class="boxes" id="iC5" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">n-Pentane (nC5), Mole% </label>
+                        <input type="text" class="boxes" id="nC5" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">n-Hexane (C6), Mole% </label>
+                        <input type="text" class="boxes" id="C6" value="0">
+                        </div>
+                        <div class="wrapper">
+                        <label class="label">n-Heptane (C7), Mole% </label>
+                        <input type="text" class="boxes" id="C7" value="0">
+                        </div>
+                        <div class="wrapper">
+                          <label class="label">n-Octane (C8), Mole% </label>
+                          <input type="text" class="boxes" id="C8" value="0">
+                          </div>
+
+                        <input style="background-color: lightblue; border: 1px solid blue; width:100px; height: 25px; " type="reset" value="Reset">
+
+
+
+    </form>
+    </div></div></div>
+    
+    <div class="ident">
+        <div class="layout">
+            <div class="layout-heading">
+            <div class="layout-tools">
+        </div></div>
+        <div class="layout-body ">
+
+
+
+            <div class="wrapper">
+                <button class="button2" onclick="calculate()">Result</button><br><br>
+                </div>
+
+
+
+<div>
+    <form action="/action_page.php"> 
+       
+       
+       
+        <div class="wrapper">
+            <label class="label">Total Mole%</label>
+            <input type="text" class="boxes" id="z11" disabled>
+            </div>
+            
+            <div class="wrapper">
+            <label class="label">Low heating value, LHV</label>
+            <input type="text" class="boxes" id="z1" disabled>
+            </div>
+       
+            <div class="wrapper">
+                <label class="label">Higher heating value, HHV</label>
+                <input type="text" class="boxes" id="z2" disabled>
+                </div>
+        
+    </form>
+    </div>
+
+  </div>
+ 
+
+  <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
+function calculate ()
+{ 
+    
+    var C1 = parseFloat(document.getElementById("C1").value);  
+    var C2 = parseFloat(document.getElementById("C2").value);
+    var C3 = parseFloat(document.getElementById("C3").value);
+    var iC4 = parseFloat(document.getElementById("iC4").value);
+    var nC4 = parseFloat(document.getElementById("nC4").value);
+    var iC5 = parseFloat(document.getElementById("iC5").value);
+    var nC5 = parseFloat(document.getElementById("nC5").value);
+    var C6 = parseFloat(document.getElementById("C6").value);
+    var C7 = parseFloat(document.getElementById("C7").value);
+    var C8 = parseFloat(document.getElementById("C8").value);
+    
+    
+      
+    
+
+
+
+
+
+
+
+
+    var total = (C1 + C2 + C3 + iC4 + nC4 + iC5 + nC5 + C6 + C7 + C8);
+    var MW = (C1 * 16.04 + C2 * 30.07 + C3 * 44.10 + iC4 * 58.12 +
+        nC4 * 58.12 + iC5 * 72.15 + nC5 * 72.15 + C6 * 86.18 + C7 * 100.21 + C8 * 114.23) / 100;    
+    var SG = MW / 28.96;
+    var LHV;
+    LHV = (C1*911+C2*1631 + C3 *2353 + iC4 *3094 +  nC4 * 3101 + iC5 * 3698 + nC5 * 3709 + C6 * 4403.8 + C7 * 5100 + C8 * 5796) / 100;
+    var LHV_m = LHV * 37.2589;
+    var HHV;
+    HHV = (C1*1012+C2*1783 + C3 *2557 + iC4 *3354 +  nC4 * 3369 + iC5 * 4001 + nC5 * 4009 + C6 * 4755.9 + C7 * 5502.5 + C8 * 6249)  / 100;
+    var HHV_m = HHV * 37.2589;
+    
+    
+    
+    {
+        document.getElementById("z11").value=total.toFixed(2); 
+        document.getElementById("z1").value=LHV.toFixed(0)+' Btu/ft3'+" ("+LHV_m.toFixed(0)+" Kj/m3)"; 
+        document.getElementById("z2").value=HHV.toFixed(0)+' Btu/ft3'+" ("+HHV_m.toFixed(0)+" Kj/m3)";
+
+        
+        
+    }
+} 
+</script>
+</body>
+</html>

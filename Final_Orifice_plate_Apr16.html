@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+
+
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.accordion {
+  font-family: 'Vollkorn', serif;  
+  background-color: rgb(220, 231, 15);
+  color: rgb(233, 225, 6);
+  cursor: pointer;
+  padding: 18px;
+  height: 80px;
+  width: 100%;
+  border: 3px outset #888;
+  text-align: center;
+  outline: none;
+  font-size: 45px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #999;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  background:linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:  rgb(7, 36, 54);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+    background-image: linear-gradient(lightgray 0%, white 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3pxgraya;}
+   .accordion:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border: 3px outset #ddd;
+  color:black;
+  background: linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;}
+
+  .btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+.button2 {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}
+
+@media (max-width: 900px) {
+.accordion  { font-size: 25px;} }
+.panel {
+padding: 0 18px;
+display: none;
+background-color: white;
+overflow: hidden;
+}
+
+#reset {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+
+
+
+button {   
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}   
+    </style>  
+
+</head>
+<body>
+    
+  <button4 style="text-align: center; width:100%" class="accordion">Orifice Plate Sizing</button4>
+  <div class="panel"><br><br>
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button>
+    </div>
+  
+  
+  
+  <div id="myDIV">
+      <form> 
+<span>Beta ratio is the ratio of the orifice bore diameter divided by the pipe inside diameter.<br>
+    Typical Beta ratio is around 0.3 - 0.7.
+    
+</span><br>  
+      
+</form>
+
+
+
+</div>
+<div class="wrap">
+<div class="left">
+  <div class="ident">
+    <div class="layout">
+        <div class="layout-heading">
+           <div class="layout-tools"></div>
+        </div>
+          <div class="layout-body">
+              <form role="form">            						
+<div class="wrapper"> 
+<div class="inputProcess">Input process Data</div><br><br>  
+
+<label class="label">Standard Pressure, psia</label>
+        <div class="combine">
+        <input type="text" class="boxes" id="sp" value="14.7">
+        <div class="combine-addon">
+            <div class="drop-down-class">
+              <select class="first" id="input1Type">
+        <option value="psig">psig</option>
+        <option value="kpag">kpag</option>
+        <option value="bar">bar</option>
+        </select> 
+        </div></div></div></div> 
+        <div class="wrapper">
+        <label class="label">Gas flow</label>
+        <div class="combine">
+        <input type="text" class="boxes" id="f" value="10">
+        <div class="combine-addon">
+            <div class="drop-down-class">
+              <select class="first" id="input4Type">
+                <option value="mmscfd">mmscfd</option>
+                <option value="e3m3/d">e3m3/d</option>
+                <option value="scfm">scfm</option>
+                <option value="sm3/hr">sm3/hr</option>
+                <option value="nm3/hr">nm3/hr</option>
+        </select> 
+        </div></div></div></div>
+
+
+<div class="wrapper">
+<label class="label">Operating Temperature</label>
+    <div class="combine">
+        <input type="text" class="boxes" id="t" value="160">
+        <div class="combine-addon">
+            <div class="drop-down-class">
+<select class="first" id="input3Type">
+<option value="F">F</option>
+<option value="C">C</option>
+                </select>
+</div></div></div></div>
+
+
+<div class="wrapper">
+    <label class="label">Operating pressure</label>
+        <div class="combine">
+            <input type="text" class="boxes" id="p" value="900">
+            <div class="combine-addon">
+                <div class="drop-down-class">
+    <select class="first" id="input2Type">
+    <option value="psig">psig</option>
+    <option value="kpag">kpag</option>
+    <option value="bar">bar</option>
+                    </select>
+    </div></div></div></div> 
+
+<div class="wrapper">
+<label class="label">Specific Gravity</label>
+<input type="text" class="boxes" id="sg" value="0.7">
+</div> 
+
+<div class="wrapper">
+    <label class="label">Gas compressiblity factor</label>
+    <input type="text" class="boxes" id="z" value="0.94">
+</div>
+
+
+<div class="wrapper">
+    <label class="label">Orifice size</label>
+    <input type="text" class="boxes" id="OID">
+</div>
+
+<div class="wrapper">
+    <label class="label">Pipe size</label>
+        <select class="boxes" id="pipeid">
+    <option value='1" sch. 40(STD)'>1" (25 mm) sch. 40(STD)</option>
+    <option value='1" sch. 80(XS)'>1" (25 mm) sch. 80(XS)</option>
+    <option value='1" sch. 160'>1" (25 mm) sch. 160</option>
+    <option value='1" sch. XXS'>1" (25 mm) sch. XXS</option>
+    <option value='1-1/2" sch. 40(STD)'>1-1/2" (40 mm) sch. 40(STD)</option>
+    <option value='1-1/2" sch. 80(XS)'>1-1/2" (40 mm) sch. 80(XS)</option>
+    <option value='1-1/2" sch. 160'>1-1/2" (40 mm) sch. XXS</option>
+    <option value='1-1/2" sch. XXS'>1-1/2" (40 mm) sch. XXS</option>
+    <option value='2" sch. 40(STD)'>2" (50 mm) sch. 40(STD)</option>
+    <option value='2" sch. 80(XS)'>2" (50 mm) sch. 80(XS)</option>
+    <option value='2" sch. 160'>2" (50 mm) sch. 160</option>
+    <option value='2" sch. XXS'>2" (50 mm) sch. XXS</option>
+    <option value='3" sch. 40(STD)'>3" (80 mm) sch. 40(STD)</option>
+    <option value='3" sch. 80(XS)'>3" (80 mm) sch. 80(XS)</option>
+    <option value='3" sch. 160'>3" (80 mm) sch. 160</option>
+    <option value='3" sch. XXS'>3" (80 mm) sch. XXS</option>
+    <option value='4" sch. 40(STD)'>4" (100 mm) sch. 40(STD)</option>
+    <option value='4" sch. 80(XS)'>4" (100 mm) sch. 80(XS)</option>
+    <option value='4" sch. 120'>4" (100 mm) sch. 120</option>
+    <option value='4" sch. 160'>4" (100 mm) sch. 160</option>
+    <option value='4" sch. XXS'>4" (100 mm) sch. XXS</option>
+    <option value='6" sch. 40(STD)'>6" (150 mm) sch. 40(STD)</option>
+    <option value='6" sch. 80(XS)'>6" (150 mm) sch. 80(XS)</option>
+    <option value='6" sch. 120'>6" (150 mm) sch. 120</option>
+    <option value='6" sch. 160'>6" (150 mm) sch. 160</option>
+    <option value='6" sch. XXS'>6" (150 mm) sch. XXS</option>
+    <option value='8" sch. 40(STD)'>8" (200 mm) sch. 40(STD)</option>
+    <option value='8" sch. 80(XS)'>8" (200 mm) sch. 80(XS)</option>
+    <option value='8" sch. 120'>8" (200 mm) sch. 120</option>
+    <option value='8" sch. XXS'>8" (200 mm) sch. XXS</option>
+    <option value='8" sch. 160'>8" (200 mm) sch. 160</option>
+    <option value='10" sch. 40(STD)'>10" (250 mm) sch. 40(STD)</option>
+    <option value='10" sch. 60(XS)'>10" (250 mm) sch. 60(XS)</option>
+    <option value='10" sch. 80'>10" (250 mm) sch. 80</option>
+    <option value='10" sch. 120'>10" (250 mm) sch. 120</option>
+    <option value='10" sch. 140(XXS)'>10" (250 mm) sch. 140(XXS)</option>
+    <option value='10" sch. 160'>10" (250 mm) sch. 160</option>
+    <option value='12" sch. STD'>12" (300 mm) sch. STD</option>
+    <option value='12" sch. 40'>12" (300 mm) sch. 40</option>
+    <option value='12" sch. XS'>12" (300 mm) sch. XS</option>
+    <option value='12" sch. 80'>12" (300 mm) sch. 80</option>
+    <option value='12" sch. 120(XXS)'>12" (300 mm) sch. 120(XXS)</option>
+    <option value='12" sch. 160'>12" (300 mm) sch. 160</option>
+    <option value='14" sch. 30(STD)'>14" (350 mm) sch. 30(STD)</option>
+    <option value='14" sch. 40'>14" (350 mm) sch. 40</option>
+    <option value='14" sch. XS'>14" (350 mm) sch. XS</option>
+    <option value='14" sch. 80'>14" (350 mm) sch. 80</option>
+    <option value='14" sch. 120'>14" (350 mm) sch. 120</option>
+    <option value='14" sch. 160'>14" (350 mm) sch. 160</option>
+    <option value='16" sch. 30(STD)'>16" (400 mm) sch. 30(STD)</option>
+    <option value='16" sch. 40(XS)'>16" (400 mm) sch. 40(XS)</option>
+    <option value='16" sch. 80'>16" (400 mm) sch. 80</option>
+    <option value='16" sch. 120'>16" (400 mm) sch. 120</option>
+    <option value='16" sch. 160'>16" (400 mm) sch. 160</option>
+    <option value='18" sch. STD'>18" (450 mm) sch. STD</option>
+    <option value='18" sch. XS'>18" (450 mm) sch. XS</option>
+    <option value='18" sch. 40'>18" (450 mm) sch. 40</option>
+    <option value='18" sch. 80'>18" (450 mm) sch. 80</option>
+    <option value='18" sch. 120'>18" (450 mm) sch. 120</option>
+    <option value='18" sch. 160'>18" (450 mm) sch. 160</option>
+    <option value='20" sch. 20(STD)'>20" (500 mm) sch. 20(STD)</option>
+    <option value='20" sch. 30(XS)'>20" (500 mm) sch. 30(XS)</option>
+    <option value='20" sch. 40'>20" (500 mm) sch. 40</option>
+    <option value='20" sch. 80'>20" (500 mm) sch. 80</option>
+    <option value='20" sch. 120'>20" (500 mm) sch. 120</option>
+    <option value='20" sch. 160'>20" (500 mm) sch. 160</option>
+    <option value='24" sch. 20(STD)'>24" (600 mm) sch. 20(STD)</option>
+    <option value='24" sch. XS'>24" (600 mm) sch. XS</option>
+    <option value='24" sch. 30'>24" (600 mm) sch. 30</option>
+    <option value='24" sch. 40'>24" (600 mm) sch. 40</option>
+    <option value='24" sch. 80'>24" (600 mm) sch. 80</option>
+    <option value='24" sch. 120'>24" (600 mm) sch. 120</option>
+    <option value='24" sch. 160'>24" (600 mm) sch. 160</option>
+</select>
+</div> 
+
+</form>
+</div>
+</div>
+</div>
+
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+ <div class="wrapper"></div>
+
+
+
+
+<button class="button2" onclick="calculate()">Result</button><br><br>
+
+
+<label class="label">Beta Ratio</label>
+<input type="text" class="boxes" id="ans0" disabled><br>
+
+<label class="label">Pressure Drop,  psi (kPa)</label>
+<input type="text" class="boxes" id="ans1" disabled>
+
+
+
+</div></div></div></div> 
+
+
+
+</div>
+ 
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function calculate () {   
+var pipeid = document.getElementById('pipeid').value;
+var dia;
+
+var z = parseFloat(document.getElementById('z').value);
+var sg = parseFloat(document.getElementById('sg').value);
+var OID = parseFloat(document.getElementById('OID').value);
+var co;
+var vis;
+var re;
+
+if(pipeid === '1" sch. 40(STD)' ){
+    dia = 1.049; }
+    else if (pipeid === '1" sch. 80(XS)' ){
+     dia = 0.957; }
+     else if (pipeid === '1" sch. 160' ){
+     dia = 0.815; }
+     else if (pipeid === '1" sch. XXS' ){
+     dia = 0.599; }
+
+     if(pipeid === '1-1/2" sch. 40(STD)' ){
+    dia = 1.61;}
+    else if (pipeid === '1-1/2" sch. 80(XS)' ){
+     dia = 1.5; }
+     else if (pipeid === '1-1/2" sch. 160' ){
+     dia = 1.338; }
+     else if (pipeid === '1-1/2" sch. XXS' ){
+     dia = 1.1; }
+
+     if(pipeid === '2" sch. 40(STD)' ){
+    dia = 2.067; }
+    else if (pipeid === '2" sch. 80(XS)' ){
+     dia = 1.939; }
+     else if (pipeid === '2" sch. 160' ){
+     dia = 1.687; }
+     else if (pipeid === '2" sch. XXS' ){
+     dia = 1.1; }
+
+     if(pipeid === '3" sch. 40(STD)' ){
+    dia = 3.068; }
+    else if (pipeid === '3" sch. 80(XS)' ){
+     dia = 2.9;  }
+     else if (pipeid === '3" sch. 160' ){
+     dia = 2.624; }
+     else if (pipeid === '3" sch. XXS' ){
+     dia = 2.3;  }
+
+
+     if(pipeid === '4" sch. 40(STD)' ){
+    dia = 4.026; }
+    else if (pipeid === '4" sch. 80(XS)' ){
+     dia = 3.826; }
+     else if (pipeid === '4" sch. 120' ){
+     dia = 3.624; }
+     else if (pipeid === '4" sch. 160' ){
+     dia = 3.438; }
+     else if (pipeid === '4" sch. XXS' ){
+     dia = 3.152; }
+
+     if(pipeid === '6" sch. 40(STD)' ){
+    dia = 6.065;  }
+    else if (pipeid === '6" sch. 80(XS)' ){
+     dia = 5.761; }
+     else if (pipeid === '6" sch. 120' ){
+     dia = 5.501; }
+     else if (pipeid === '6" sch. 160' ){
+     dia = 5.187; }
+     else if (pipeid === '6" sch. XXS' ){
+     dia = 4.897; }
+
+     if(pipeid === '8" sch. 40(STD)' ){
+    dia = 7.981;  }
+    else if (pipeid === '8" sch. 80(XS)' ){
+     dia = 7.625; }
+     else if (pipeid === '8" sch. 120' ){
+     dia = 7.187; }
+     else if (pipeid === '8" sch. XXS' ){
+     dia = 6.875; }
+     else if (pipeid === '8" sch. 160' ){
+     dia = 6.813; }
+
+     if(pipeid === '10" sch. 40(STD)' ){
+    dia = 10.02;  }
+    else if (pipeid === '10" sch. 60(XS)' ){
+     dia = 9.75;  }
+     else if (pipeid === '10" sch. 80' ){
+     dia = 9.562; }
+     else if (pipeid === '10" sch. 120' ){
+     dia = 9.062; }
+     else if (pipeid === '10" sch. 140(XXS)' ){
+     dia = 8.75;  }
+     else if (pipeid === '10" sch. 160' ){
+     dia = 8.5;  }
+
+     if(pipeid === '12" sch. STD' ){
+    dia = 12;  }
+    else if (pipeid === '12" sch. 40' ){
+     dia = 11.938;  }
+     else if (pipeid === '12" sch. XS' ){
+     dia = 11.75;  }
+     else if (pipeid === '12" sch. 80' ){
+     dia = 11.374; }
+     else if (pipeid === '12" sch. 120(XXS)' ){
+     dia = 10.75;  }
+     else if (pipeid === '12" sch. 160' ){
+     dia = 10.126; }
+
+     if(pipeid === '14" sch. 30(STD)' ){
+    dia = 13.25;  }
+    else if (pipeid === '14" sch. 40' ){
+     dia = 13.124; }
+     else if (pipeid === '14" sch. XS' ){
+     dia = 13;  }
+     else if (pipeid === '14" sch. 80' ){
+     dia = 12.5; }
+     else if (pipeid === '14" sch. 120' ){
+     dia = 11.812; }
+     else if (pipeid === '14" sch. 160' ){
+     dia = 11.188; }
+
+     if(pipeid === '16" sch. 30(STD)' ){
+    dia = 15.25;  }
+    else if (pipeid === '16" sch. 40(XS)' ){
+     dia = 15;  }
+     else if (pipeid === '16" sch. 80' ){
+     dia = 14.312; }
+     else if (pipeid === '16" sch. 120' ){
+     dia = 13.562; }
+     else if (pipeid === '16" sch. 160' ){
+     dia = 12.812; }
+    
+     if(pipeid === '18" sch. STD' ){
+    dia = 17.25;  }
+    else if (pipeid === '18" sch. XS' ){
+     dia = 17;  }
+     else if (pipeid === '18" sch. 40' ){
+     dia = 16.876; }
+     else if (pipeid === '18" sch. 80' ){
+     dia = 16.124; }
+     else if (pipeid === '18" sch. 120' ){
+     dia = 15.25;  }
+     else if (pipeid === '18" sch. 160' ){
+     dia = 14.438; }
+
+     if(pipeid === '20" sch. 20(STD)' ){
+    dia = 19.25;  }
+    else if (pipeid === '20" sch. 30(XS)' ){
+     dia = 19;  }
+     else if (pipeid === '20" sch. 40' ){
+     dia = 18.812;  }
+     else if (pipeid === '20" sch. 80' ){
+     dia = 17.938;  }
+     else if (pipeid === '20" sch. 120' ){
+     dia = 17; }
+     else if (pipeid === '20" sch. 160' ){
+     dia = 16.062; }
+
+     if(pipeid === '24" sch. 20(STD)' ){
+    dia = 23.25;  }
+    else if (pipeid === '24" sch. XS' ){
+     dia = 23;  }
+     else if (pipeid === '24" sch. 30' ){
+     dia = 22.876; }
+     else if (pipeid === '24" sch. 40' ){
+     dia = 22.624; }
+     else if (pipeid === '24" sch. 80' ){
+     dia = 21.562; }
+     else if (pipeid === '24" sch. 120' ){
+     dia = 20.376; }
+     else if (pipeid === '24" sch. 160' ){
+     dia = 19.312; }
+
+var sp = parseFloat(document.getElementById('sp').value);
+var input1Type = document.getElementById('input1Type').value;
+
+if(input1Type === "psig" ){
+        sp = sp * 1;
+    }else if(input1Type === "kpag" ){
+        sp = sp * 0.145038;
+    }else if(input1Type === "bar" ){
+        sp = sp * 14.5038;
+    }
+
+
+var p = parseFloat(document.getElementById('p').value);
+var input2Type = document.getElementById('input2Type').value;
+
+if(input2Type === "psig" ){
+        p = p * 1;
+    }else if(input2Type === "kpag" ){
+        p = p * 0.145038;
+    }else if(input2Type === "bar" ){
+        p = p * 14.5038;
+    }
+
+var t = parseFloat(document.getElementById('t').value);
+var input3Type = document.getElementById('input3Type').value;
+
+if(input3Type === "F" ){
+   t = t * 1;
+}else if(input3Type === "C" ){
+    t = (t * 9/5)+32;
+}
+
+var f = parseFloat(document.getElementById('f').value);
+var input4Type = document.getElementById('input4Type').value;
+
+
+if(input4Type === "mmscfd" ){
+        f = f * 1;
+    }else if(input4Type === "e3m3/d" ){
+        f = f / 28.3168466;
+    }else if(input4Type === "scfm" ){
+        f = f / 694.44;
+    }else if(input4Type === "sm3/hr" ){
+        f = f / 1177.17;
+    }else if(input4Type === "nm3/hr" ){
+        f = f / 1115.89;
+    }
+ 
+    var beta = OID/dia;
+    var area = (0.25*3.1415*(OID**2))/144;
+    var dens = (sg*28.966*sp)/(10.7316*(60+460));
+    var denop = (sg*28.966*(sp+p))/(10.7316*(t+460)*z);
+    var mass = f*1000000*dens/1440;
+    var flowa = 10.7316*1440*mass*(t+460)*z/(sg*28.966*(p+sp)*1000000);
+    var vel = flowa * 1000000 / (2.5*3.1415*(dia**2));  
+
+    if(p < 100 && t < 20 ){ vis = 5.91;}
+    else if(p < 200 && t < 20 ){ vis = 6.19;}
+    else if(p < 300 && t < 20 ){ vis = 6.34;}
+    else if(p < 400 && t < 20 ){ vis = 6.5;}
+    else if(p < 500 && t < 20 ){ vis = 6.65;}
+    else if(p < 600 && t < 20 ){ vis = 7.06;}
+    else if(p < 700 && t < 20 ){ vis = 7.45;}
+    else if(p < 800 && t < 20 ){ vis = 7.8;}
+    else if(p < 900 && t < 20 ){ vis = 8.10;}
+    else if(p < 1000 && t < 20 ){ vis = 8.39;}
+    else if(p < 1500 && t < 20 ){ vis = 12.43;}
+    else if(p < 2000 && t < 20 ){ vis = 17.13;}
+    else if(p < 2500 && t < 20 ){ vis = 19.3;}
+    else if(p < 3000 && t < 20 ){ vis = 21.5;}
+    
+    else if(p < 100 && t < 40 ){ vis = 7.02;}
+    else if(p < 200 && t < 40 ){ vis = 7.15;}
+    else if(p < 300  &&  t < 40 ){ vis = 7.29;}
+    else if(p < 400 && t < 40 ){ vis = 7.42;}
+    else if(p < 500 && t < 40 ){ vis = 7.56;}
+    else if(p < 600 && t < 40 ){ vis = 7.73;}
+    else if(p < 700 && t < 40 ){ vis = 7.8;}
+    else if(p < 800 && t < 40 ){ vis = 8.28;}
+    else if(p < 900 && t < 20 ){ vis = 8.51;}
+    else if(p < 1000 && t < 40 ){ vis = 8.73;}
+    else if(p < 1500 && t < 40 ){ vis = 10.88;}
+    else if(p < 2000 && t< 40 ){ vis = 14.44;}
+    else if(p < 2500 && t < 40 ){ vis = 16.36;}
+    else if(p < 3000 && t < 40 ){ vis = 18.27;}
+    
+    else if(p < 100 && t < 80 ){ vis = 7.52;}
+    else if(p < 200 && t < 80 ){ vis = 7.66;}
+    else if(p < 300 && t < 80 ){ vis = 7.79;}
+    else if(p < 400 && t < 80 ){ vis = 7.92;}
+    else if(p < 500 && t < 80 ){ vis = 8.06;}
+    else if(p < 600 && t < 80 ){ vis = 8.19;}
+    else if(p < 700 && t < 80 ){ vis = 8.33;}
+    else if(p < 800 && t < 80 ){ vis = 8.7;}
+    else if(p < 900 && t < 80 ){ vis = 8.95;}
+    else if(p < 1000 && t < 80 ){ vis = 9.2;}
+    else if(p < 1500 && t < 80 ){ vis = 10.6;}
+    else if(p < 2000 && t < 80 ){ vis = 13.7;}
+    else if(p < 2500 && t < 80 ){ vis = 15.45;}
+    else if(p < 3000 && t < 80 ){ vis = 17.13;}
+    
+    else if(p < 100 && t < 120 ){ vis = 7.98;}
+    else if(p < 200 && t < 120 ){ vis = 8.1;}
+    else if(p < 300 && t < 120 ){ vis = 8.22;}
+    else if(p < 400 && t < 120 ){ vis = 8.34;}
+    else if(p < 500 && t < 120 ){ vis = 8.46;}
+    else if(p < 600 && t < 120 ){ vis = 8.64;}
+    else if(p < 700 && t < 120 ){ vis = 8.82;}
+    else if(p < 800 && t < 120 ){ vis = 9.18;}
+    else if(p < 900 && t < 120 ){ vis = 9.36;}
+    else if(p < 1000 && t < 120 ){ vis = 9.54;}
+    else if(p < 1500 && t < 120 ){ vis = 10.48;}
+    else if(p < 2000 && t < 120 ){ vis = 13.23;}
+    else if(p < 2500 && t < 120 ){ vis = 14.74;}
+    else if(p < 3000 && t < 120 ){ vis = 16.26;}
+    
+    else if(p < 100 && t < 160 ){ vis = 8.46;}
+    else if(p < 200 && t < 160 ){ vis = 8.6;}
+    else if(p < 300 && t < 160 ){ vis = 8.73;}
+    else if(p < 400 && t < 160 ){ vis = 8.86;}
+    else if(p < 500 && t < 160 ){ vis = 9.00;}
+    else if(p < 600 && t < 160 ){ vis = 9.13;}
+    else if(p < 700 && t < 160 ){ vis = 9.27;}
+    else if(p < 800 && t < 160 ){ vis = 9.56;}
+    else if(p < 900 && t < 160 ){ vis = 9.72;}
+    else if(p < 1000 && t < 160 ){ vis = 9.87;}
+    else if(p < 1500 && t < 160 ){ vis = 10.78;}
+    else if(p < 2000 && t < 160 ){ vis = 12.96;}
+    else if(p < 2500 && t < 160 ){ vis = 14.36;}
+    else if(p < 3000 && t < 160 ){ vis = 15.72;}
+    
+    else if(p < 100 && t < 200 ){ vis = 8.86;}
+    else if(p < 200 && t < 200 ){ vis = 9.0;}
+    else if(p < 300 && t < 200 ){ vis = 9.13;}
+    else if(p < 400 && t < 200 ){ vis = 9.27;}
+    else if(p < 500 && t < 200 ){ vis = 9.4;}
+    else if(p < 600 && t < 200 ){ vis = 9.56;}
+    else if(p < 700 && t < 200 ){ vis = 9.72;}
+    else if(p < 800 && t < 200 ){ vis = 10.3;}
+    else if(p < 900 && t < 200 ){ vis = 10.19;}
+    else if(p < 1000 && t < 200 ){ vis = 10.34;}
+    else if(p < 1500 && t < 200 ){ vis = 11.08;}
+    else if(p < 2000 && t < 200 ){ vis = 12.76;}
+    else if(p < 2500 && t < 200 ){ vis = 14.11;}
+    else if(p < 3000 && t < 200 ){ vis = 15.45;}
+    
+    else if(p < 100 && t < 240 ){ vis = 9.39;}
+    else if(p < 200 && t < 240 ){ vis = 9.5;}
+    else if(p < 300 && t < 240 ){ vis = 9.63;}
+    else if(p < 400 && t < 240 ){ vis = 9.75;}
+    else if(p < 500 && t < 240 ){ vis = 9.87;}
+    else if(p < 600 && t < 240 ){ vis = 10.06;}
+    else if(p < 700 && t < 240 ){ vis = 10.23;}
+    else if(p < 800 && t < 240 ){ vis = 10.52;}
+    else if(p < 900 && t < 240 ){ vis = 10.63;}
+    else if(p < 1000 && t < 240 ){ vis = 10.75;}
+    else if(p < 1500 && t < 240 ){ vis = 11.42;}
+    else if(p < 2000 && t < 240 ){ vis = 12.63;}
+    else if(p < 2500 && t < 240 ){ vis = 13.87;}
+    else if(p < 3000 && t < 240 ){ vis = 15.11;}
+    
+    else if(p < 100 && t < 280 ){ vis = 9.80;}
+    else if(p < 200 && t < 280 ){ vis = 9.93;}
+    else if(p < 300 && t < 280 ){ vis = 10.05;}
+    else if(p < 400 && t < 280 ){ vis = 10.18;}
+    else if(p < 500 && t < 280 ){ vis = 10.31;}
+    else if(p < 600 && t < 280 ){ vis = 10.46;}
+    else if(p < 700 && t < 280 ){ vis = 10.60;}
+    else if(p < 800 && t < 280 ){ vis = 10.88;}
+    else if(p < 900 && t < 280 ){ vis = 11.02;}
+    else if(p < 1000 && t < 280 ){ vis = 11.15;}
+    else if(p < 1500 && t < 280 ){ vis = 11.75;}
+    else if(p < 2000 && t < 280 ){ vis = 12.63;}
+    else if(p < 2500 && t < 280 ){ vis = 13.79;}
+    else if(p < 3000 && t < 280 ){ vis = 14.95;}
+    
+    else if(p < 100 && t >= 280 ){ vis = 10.21;}
+    else if(p < 200 && t >= 280 ){ vis = 10.34;}
+    else if(p < 300 && t >= 280 ){ vis = 10.48;}
+    else if(p < 400 && t >= 280 ){ vis = 10.62;}
+    else if(p < 500 && t >= 280 ){ vis = 10.75;}
+    else if(p < 600 && t >= 280 ){ vis = 10.86;}
+    else if(p < 700 && t >= 280 ){ vis = 10.97;}
+    else if(p < 800 && t >= 280 ){ vis = 11.24;}
+    else if(p < 900 && t >= 280 ){ vis = 11.40;}
+    else if(p < 1000 && t >= 280 ){ vis = 11.56;}
+    else if(p < 1500 && t >= 280 ){ vis = 12.09;}
+    else if(p < 2000 && t >= 280 ){ vis = 12.76;}
+    else if(p < 2500 && t >= 280 ){ vis = 13.77;}
+    else if(p < 3000 && t >= 280 ){ vis = 14.78;}
+    else { vis = 14.78;}
+
+    var re = denop*(vel/60)*(dia/12)/(vis*0.000001);
+    var actflow = flowa * 1000000/86400;
+
+    if(beta < 0.2 && re < 2000 ){ co = 0.608;}
+    else if(beta < 0.3 && re < 2000 ){ co = 0.61;}
+    else if(beta < 0.4 && re < 2000 ){ co = 0.63;}
+    else if(beta < 0.45 && re < 2000 ){ co = 0.65;}
+    else if(beta < 0.5 && re < 2000 ){ co = 0.68;}
+    else if(beta < 0.55 && re < 2000 ){ co = 0.71;}
+    else if(beta < 0.6 && re < 2000 ){ co = 0.735;}
+    else if(beta < 0.625 && re < 2000 ){ co = 0.7650;}
+    else if(beta < 0.65 && re < 2000 ){ co = 0.795;}
+    else if(beta < 0.675 && re < 2000 ){ co = 0.83;}
+    else if(beta < 0.7 && re < 2000 ){ co = 0.865;}
+    else if(beta < 0.725 && re < 2000 ){ co = 0.9225;}
+    else if(beta < 0.75 && re < 2000 ){ co = 0.98;}
+    else if(beta < 0.775 && re < 2000 ){ co = 1.0975;}
+    else if(beta < 0.8 && re < 2000 ){ co = 1.215;}
+
+    else if(beta < 0.2 && re < 4000 ){ co = 0.603;}
+    else if(beta < 0.3 && re < 4000 ){ co = 0.608;}
+    else if(beta < 0.4 && re < 4000 ){ co = 0.618;}
+    else if(beta < 0.45 && re < 4000 ){ co = 0.635;}
+    else if(beta < 0.5 && re < 4000 ){ co = 0.66;}
+    else if(beta < 0.55 && re < 4000 ){ co = 0.75;}
+    else if(beta < 0.6 && re < 4000 ){ co = 0.703;}
+    else if(beta < 0.625 && re < 4000 ){ co = 0.7215;}
+    else if(beta < 0.65 && re < 4000 ){ co = 0.74;}
+    else if(beta < 0.675 && re < 4000 ){ co = 0.76;}
+    else if(beta < 0.7 && re < 4000 ){ co = 0.78;}
+    else if(beta < 0.725 && re < 4000 ){ co = 0.8075;}
+    else if(beta < 0.75 && re < 4000 ){ co = 0.835;}
+    else if(beta < 0.775 && re < 4000 ){ co = 0.8825;}
+    else if(beta < 0.8 && re < 4000 ){ co = 0.93;}
+
+
+    else if(beta < 0.2 && re < 6000 ){ co = 0.6;}
+    else if(beta < 0.3 && re < 6000 ){ co = 0.606;}
+    else if(beta < 0.4 && re < 6000 ){ co = 0.615;}
+    else if(beta < 0.45 && re < 6000 ){ co = 0.63;}
+    else if(beta < 0.5 && re < 6000 ){ co = 0.648;}
+    else if(beta < 0.55 && re < 6000 ){ co = 0.663;}
+    else if(beta < 0.6 && re < 6000 ){ co = 0.685;}
+    else if(beta < 0.625 && re < 6000 ){ co = 0.7025;}
+    else if(beta < 0.65 && re < 6000 ){ co = 0.72;}
+    else if(beta < 0.675 && re < 6000 ){ co = 0.74;}
+    else if(beta < 0.7 && re < 6000 ){ co = 0.76;}
+    else if(beta < 0.725 && re < 6000 ){ co = 0.78;}
+    else if(beta < 0.75 && re < 6000 ){ co = 0.8;}
+    else if(beta < 0.775 && re < 6000 ){ co = 0.8375;}
+    else if(beta < 0.8 && re < 6000 ){ co = 0.875;}
+
+    else if(beta < 0.2 && re < 10000 ){ co = 0.596;}
+    else if(beta < 0.3 && re < 10000 ){ co = 0.604;}
+    else if(beta < 0.4 && re < 10000 ){ co = 0.614;}
+    else if(beta < 0.45 && re < 10000 ){ co = 0.622;}
+    else if(beta < 0.5 && re < 10000 ){ co = 0.633;}
+    else if(beta < 0.55 && re < 10000 ){ co = 0.647;}
+    else if(beta < 0.6 && re < 10000 ){ co = 0.665;}
+    else if(beta < 0.625 && re <10000 ){ co = 0.678;}
+    else if(beta < 0.65 && re < 10000 ){ co = 0.692;}
+    else if(beta < 0.675 && re < 10000 ){ co = 0.713;}
+    else if(beta < 0.7 && re < 10000 ){ co = 0.734;}
+    else if(beta < 0.725 && re < 10000 ){ co = 0.7515;}
+    else if(beta < 0.75 && re < 10000 ){ co = 0.769;}
+    else if(beta < 0.775 && re < 10000 ){ co = 0.8045;}
+    else if(beta < 0.8 && re < 10000 ){ co = 0.84;}
+
+    else if(beta < 0.2 && re < 60000 ){ co = 0.596;}
+    else if(beta < 0.3 && re < 60000 ){ co = 0.60;}
+    else if(beta < 0.4 && re < 60000 ){ co = 0.607;}
+    else if(beta < 0.45 && re < 60000 ){ co = 0.615;}
+    else if(beta < 0.5 && re < 60000 ){ co = 0.624;}
+    else if(beta < 0.55 && re < 60000 ){ co = 0.637;}
+    else if(beta < 0.6 && re < 60000 ){ co = 0.655;}
+    else if(beta < 0.625 && re <60000 ){ co = 0.666;}
+    else if(beta < 0.65 && re < 60000 ){ co = 0.677;}
+    else if(beta < 0.675 && re < 60000 ){ co = 0.6920;}
+    else if(beta < 0.7 && re < 60000 ){ co = 0.707;}
+    else if(beta < 0.725 && re < 60000 ){ co = 0.7285;}
+    else if(beta < 0.75 && re < 60000 ){ co = 0.75;}
+    else if(beta < 0.775 && re < 60000 ){ co = 0.7835;}
+    else if(beta < 0.8 && re < 60000 ){ co = 0.81;}
+
+    else if(beta < 0.2 && re >= 60000 ){ co = 0.596;}
+    else if(beta < 0.3 && re >= 60000 ){ co = 0.60;}
+    else if(beta < 0.4 && re >= 60000 ){ co = 0.607;}
+    else if(beta < 0.45 && re >= 60000 ){ co = 0.613;}
+    else if(beta < 0.5 && re >= 60000 ){ co = 0.6225;}
+    else if(beta < 0.55 && re >= 60000 ){ co = 0.636;}
+    else if(beta < 0.6 && re >= 60000 ){ co = 0.654;}
+    else if(beta < 0.625 && re >= 60000 ){ co = 0.665;}
+    else if(beta < 0.65 && re >= 60000 ){ co = 0.676;}
+    else if(beta < 0.675 && re >= 60000 ){ co = 0.6905;}
+    else if(beta < 0.7 && re >= 60000 ){ co = 0.705;}
+    else if(beta < 0.725 && re >= 60000 ){ co = 0.7255;}
+    else if(beta < 0.75 && re >= 60000 ){ co = 0.746;}
+    else if(beta < 0.775 && re >= 60000 ){ co = 0.778;}
+    else if(beta < 0.8 && re >= 60000 ){ co = 0.81;}
+    else { co = 0.81;}
+ 
+    var pd = ((0.5*(((1-beta**2)/(co**2*beta**4))) * ((denop*0.4536/(0.3048**3))) * (vel*0.3048/60)**2/101325*sp)) / (0.98**2);
+    var pd_k = pd * 6.895;
+    {
+        document.getElementById("ans1").value=pd.toFixed(1)+' psi'+" ("+pd_k.toFixed(0)+" kPa)";
+        document.getElementById("ans0").value=beta.toFixed(2);
+        
+    }
+}
+</script>
+</body>
+</html>

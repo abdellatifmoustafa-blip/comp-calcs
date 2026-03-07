@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+.button2 {
+    background-color: lightblue; 
+  border: 1px solid blue;
+  color: black;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 32px;
+}
+
+#reset {
+    background-color: lightblue; 
+  border: 1px solid blue;
+  color: black;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 32px;
+}
+
+
+button {   
+height: 30px;
+  width: 180px;
+  display: inline-flex;
+  background: lightblue;
+  color: black;
+  text-align: center;
+  font-size: 100%;
+  text-align: center;
+  padding-left: 15px;
+  padding-top: 5px;
+  border: 1px solid blue;
+           
+}    
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.btn{
+font-size: 25px;
+background-color: lightblue;
+color: black;
+border: 1px solid blue;
+padding: 9px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  margin-bottom: 40px;
+  height: 40px;
+  border: 1px solid blue;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}   
+#panel, .flip {
+    width: 200X;
+    display: block;
+    background: white;
+    color: black;
+    text-align: justify;
+    font-size: 100%;
+}
+
+#panel {
+    width: 200X;
+    display: none;
+}
+    </style>  
+
+</head>
+<body>
+    <img src="logo10.png" style="margin-left:30px" width=150 height="50">
+    <h1 style="text-align: center; color: black;">Reciprocating Compressor Cylinders packing vent</h1>
+      
+  
+    <div class="container">
+      <button class ="btn" onclick="myFunction1()"> Read Me </button>
+      </div>
+    
+    
+    
+    <div id="myDIV">
+        <form> 
+
+     
+        <span> 
+               
+            <br/>
+            </span><br>  
+        </form>
+    </div>
+    
+    <div class="wrap">
+        <div class="left">
+           <div class="ident">
+             <div class="layout">
+                 <div class="layout-heading">
+                    <div class="layout-tools"></div>
+                 </div>
+                   <div class="layout-body">
+                       <form role="form">            						
+                          <div class="wrapper">
+                               <div class="inputProcess">Input Cylinders Data</div><br><br>
+    
+                               
+                                <label class="control-label">Number of Cylindres (max 6)</label>
+                                <input type="text" class="boxes" id="n" value="6">
+                            </div>    
+
+<div class="wrapper">                       
+    <label class="label">New packing</label>
+        <div class="combine">
+            <input type="text" class="boxes" id="ln" value="10">
+                <div class="combine-addon">
+                    <div class="drop-down-class">
+    <select class="first" id="input1Type">
+        <option value="scfh">scfh</option>
+        <option value="l/min">l/min</option>
+                    </select>
+</div></div></div></div>
+
+    
+<div class="wrapper">                       
+    <label class="label">New packing - purged</label>
+        <div class="combine">
+            <input type="text" class="boxes" id="lnp" value="15">
+                <div class="combine-addon">
+                    <div class="drop-down-class">
+    <select class="first" id="input2Type">
+        <option value="scfh">scfh</option>
+        <option value="l/min">l/min</option>
+                    </select>
+</div></div></div></div>
+    
+<div class="wrapper">                       
+    <label class="label">Worn packing</label>
+        <div class="combine">
+            <input type="text" class="boxes" id="lw" value="180">
+                <div class="combine-addon">
+                    <div class="drop-down-class">
+    <select class="first" id="input3Type">
+        <option value="scfh">scfh</option>
+        <option value="l/min">l/min</option>
+                    </select>
+</div></div></div></div>    
+    
+    
+<div class="wrapper">                       
+    <label class="label">Worn packing - purged</label>
+        <div class="combine">
+            <input type="text" class="boxes" id="lwp" value="200">
+                <div class="combine-addon">
+                    <div class="drop-down-class">
+    <select class="first" id="input4Type">
+        <option value="scfh">scfh</option>
+        <option value="l/min">l/min</option>
+                    </select>
+</div></div></div></div>      
+
+</form>
+</div>
+</div>
+</div>
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+ <div class="wrapper">
+
+
+
+    
+        <button class="button2" onclick="calculate()">Result</button><br><br>
+        <label class="label">Total leakage - New Packing</label>
+        <input type="text" class="boxes" id="ans1" disabled><br>
+        <label class="label">Total leakage - New purged Packing</label>
+        <input type="text" class="boxes" id="ans2" disabled><br>
+
+        <label class="label">Total leakage - Worn-out packing</label>
+        <input type="text" class="boxes" id="ans3" disabled><br>
+        <label class="label">Total leakage - Worn-out purged packing</label>
+        <input type="text" class="boxes" id="ans4" disabled>
+
+
+        
+    </form>
+</div>
+
+<script>
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function calculate () {   
+var ln = parseFloat(document.getElementById('ln').value);
+var input1Type = document.getElementById('input1Type').value;
+if(input1Type === "scfh" ){
+    ln = ln * 1;
+}else if(input1Type === "l/min" ){
+    ln = ln * 0.47;
+}
+
+var lnp = parseFloat(document.getElementById('lnp').value);
+var input2Type = document.getElementById('input2Type').value;
+if(input2Type === "scfh" ){
+    lnp = lnp * 1;
+}else if(input2Type === "l/min" ){
+    lnp = lnp * 0.47;
+}
+
+var lw = parseFloat(document.getElementById('lw').value);
+var input3Type = document.getElementById('input3Type').value;
+if(input3Type === "scfh" ){
+    lw = lw * 1;
+}else if(input3Type === "l/min" ){
+    lw = lw * 0.47;
+}
+
+var lwp = parseFloat(document.getElementById('lwp').value);
+var input4Type = document.getElementById('input4Type').value;
+if(input4Type === "scfh" ){
+    lwp = lwp * 1;
+}else if(input4Type === "l/min" ){
+    lwp = lwp * 0.47;
+}
+
+
+    var n = parseFloat(document.getElementById("n").value);
+    
+       
+    var leakn = n*ln;
+    var leakn_l = leakn * 0.47;
+    var leaknp = n*lnp;
+    var leaknp_l = leaknp * 0.47;
+    var leakw = (n-1)*ln+lw;
+    var leakw_l = leakw * 0.47;
+    var leakwp = (n-1)*lnp+lwp;
+    var leakwp_l = leakwp * 0.47;
+    {
+    
+        document.getElementById("ans1").value=leakn.toFixed(1)+' SCFH'+" ("+leakn_l.toFixed(0)+" L/min)";
+        document.getElementById("ans2").value=leaknp.toFixed(1)+' SCFH'+" ("+leaknp_l.toFixed(0)+" L/min)";;
+        document.getElementById("ans3").value=leakw.toFixed(1)+' SCFH'+" ("+leakw_l.toFixed(0)+" L/min)";;
+        document.getElementById("ans4").value=leakwp.toFixed(1)+' SCFH'+" ("+leakwp_l.toFixed(0)+" L/min)";;
+       
+    }
+} 
+</script>
+</body>
+</html>

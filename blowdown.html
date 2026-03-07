@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+
+
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.accordion {
+  font-family: 'Vollkorn', serif;  
+  background-color: rgb(220, 231, 15);
+  color: rgb(233, 225, 6);
+  cursor: pointer;
+  padding: 18px;
+  height: 80px;
+  width: 100%;
+  border: 3px outset #888;
+  text-align: center;
+  outline: none;
+  font-size: 45px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #999;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  background:linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:  rgb(7, 36, 54);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+    background-image: linear-gradient(lightgray 0%, white 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3pxgraya;}
+   .accordion:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border: 3px outset #ddd;
+  color:black;
+  background: linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;}
+
+  .btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+.button2 {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}
+
+@media (max-width: 900px) {
+.accordion  { font-size: 25px;} }
+.panel {
+padding: 0 18px;
+display: none;
+background-color: white;
+overflow: hidden;
+}
+
+#reset {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+
+
+
+button {   
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: rgb(7, 36, 54);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(lightgray 0%, white 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}  
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+}  
+
+    </style>  
+
+</head>
+<body>
+    
+  <button4 style="text-align: center; width:100%" class="accordion">Blowdown Time Calculation</button4>
+  <div class="panel"><br><br>
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button>
+    </div>
+  
+  
+  
+  <div id="myDIV">
+      <form> 
+     
+        <span>Actual volume, initial pressure and initial temperature can be obtained from settle out pressure calculation. <br>
+          It is always a good practice to install orifice plates downstream of blowdown valves, that gives flexibility to reduce the blowdown time if a blowdown valve has a larger trim than required.
+          </span>
+</form>
+
+
+
+</div>
+<div class="wrap">
+   <div class="left">
+      <div class="ident">
+        <div class="layout">
+            <div class="layout-heading">
+               <div class="layout-tools"></div>
+            </div>
+              <div class="layout-body">
+                  <form role="form">            						
+  <div class="wrapper"> 
+    <div class="inputProcess">Input process Data</div><br><br>
+
+    
+    <div class="wrapper">
+      <label class="label">Air Flow</label>
+        <div class="combine">
+           <input type="text" class="boxes" id="v" value="1200">
+              <div class="combine-addon">
+                  <div class="drop-down-class">
+      <select class="first" id="input1Type">
+        <option value="ft3">ft3</option>
+        <option value="m3">m3</option>
+                    </select>
+      </div></div></div></div>
+    
+    
+<label class="label">Initial Pressure</label>
+<div class="combine">
+<input type="text" class="boxes" id="p1" value="500">
+<div class="combine-addon">
+    <div class="drop-down-class">
+      <select class="first" id="input2Type">
+<option value="psig">psig</option>
+<option value="kpag">kpag</option>
+<option value="bar">bar</option>
+</select> 
+</div></div></div></div>  
+
+ <div class="wrapper">
+<label class="label">Final pressure</label>
+  <div class="combine">
+     <input type="text" class="boxes" id="p2" value="100">
+        <div class="combine-addon">
+            <div class="drop-down-class">
+<select class="first" id="input3Type">
+  <option value="psig">psig</option>
+<option value="kpag">kpag</option>
+<option value="bar">bar</option>
+              </select>
+</div></div></div></div> 
+
+<div class="wrapper">
+  <label class="label">Initial temperature</label>
+    <div class="combine">
+       <input type="text" class="boxes" id="t" value="150">
+          <div class="combine-addon">
+              <div class="drop-down-class">
+  <select class="first" id="input4Type">
+  <option value="F">F</option>
+  <option value="C">C</option>
+                </select>
+  </div></div></div></div> 
+
+<div class="wrapper">
+  <label class="label">Atmospheric Pressure</label>
+    <div class="combine">
+       <input type="text" class="boxes" id="atm" value="14.7">
+          <div class="combine-addon">
+              <div class="drop-down-class">
+  <select class="first" id="input5Type">
+  <option value="psig">psig</option>
+  <option value="kpag">kpag</option>
+  <option value="bar">bar</option>
+                </select>
+  </div></div></div></div> 
+
+  <div class="wrapper">
+    <label class="label">Specific gravity </label>
+    <input type="text" class="boxes" id="sg" value="0.75">
+</div> 
+          
+<div class="wrapper">
+    <label class="label">Compressiblity factor </label>
+    <input type="text" class="boxes" id="z" value="0.95">
+</div> 
+
+                         
+
+
+<div class="wrapper">
+    <label class="label">Valve size</label>
+        <select class="boxes" id="pipeid">
+          <option value='1" Valve 3/4" trim'>1" Valve 3/4" trim</option>
+          <option value='1" Valve 1/2" trim'>1" Valve 1/2" trim</option>
+          <option value='1" Valve 3/8" trim'>1" Valve 3/8" trim</option>
+          <option value='1" Valve 1/4" trim'>1" Valve 1/4" trim</option>
+          <option value='2" Valve 1-1/4" trim'>2" Valve 1-1/4" trim</option>
+          <option value='2" Valve 1" trim'>2" Valve 1" trim</option>
+          <option value='2" Valve 3/4" trim'>2" Valve 3/4" trim</option>
+          <option value='2" Valve 1/2" trim'>2" Valve 1/2" trim</option>
+          <option value='2" Valve 3/8" trim'>2" Valve 3/8" trim</option>
+          <option value='2" Valve 1/4" trim'>2" Valve 1/4" trim</option>
+        </select>	
+  
+  </div>  
+
+
+
+
+
+</form>
+</div>
+</div>
+</div>
+
+<div class="ident">
+<div class="layout">
+   <div class="layout-heading">
+   <div class="layout-tools">
+</div></div>
+<div class="layout-body ">
+ <div class="wrapper"></div>
+   <button class="button2" onclick="calculate()">Result</button><br><br>
+    
+        
+   <label class="label">Blowdown time, minutes</label>
+    <input type="text" class="boxes" id="result" disabled>
+                 
+        </div></div></div></div> 
+   
+
+
+      </div>
+ 
+
+      <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function calculate () {   
+var pipeid = document.getElementById('pipeid').value;
+var dia;
+
+
+
+ if(pipeid === '1" Valve 3/4" trim'){
+        dia = 396; }
+       else if(pipeid === '1" Valve 1/2" trim'){
+        dia = 204; }
+       else if(pipeid === '1" Valve 3/8" trim'){
+       dia = 117; }
+        else if(pipeid === '1" Valve 1/4" trim'){
+           dia = 53;}
+       else if(pipeid === '2" Valve 1-1/4" trim'){
+           dia = 1158;}
+       else if(pipeid === '2" Valve 1" trim'){
+           dia = 746;}
+      else if(pipeid === '2" Valve 3/4" trim'){
+           dia = 429;}
+      else if(pipeid === '2" Valve 1/2" trim'){
+       dia = 196;}
+      else if(pipeid === '2" Valve 3/8" trim'){
+       dia = 117;}
+      else if(pipeid === '2" Valve 1/4" trim'){
+       dia = 53;}
+
+
+    var v = parseFloat(document.getElementById('v').value);
+    var input1Type = document.getElementById('input1Type').value;
+
+    if(input1Type === "ft3" ){
+        v = v * 1;
+    }else if(input1Type === "m3" ){
+        v = v * 35.3147;
+    }
+    
+    var p1 = parseFloat(document.getElementById('p1').value);
+    var input2Type = document.getElementById('input2Type').value;
+
+    if(input2Type === "psig" ){
+        p1 = p1 * 1;
+    }else if(input2Type === "kpag" ){
+        p1 = p1 * 0.145038;
+    }else if(input2Type === "bar" ){
+        p1 = p1 * 14.5038;
+    }
+
+    var p2 = parseFloat(document.getElementById('p2').value);
+    var input3Type = document.getElementById('input3Type').value;
+
+    if(input3Type === "psig" ){
+        p2 = p2 * 1;
+    }else if(input3Type === "kpag" ){
+        p2 = p2 * 0.145038;
+    }else if(input3Type === "bar" ){
+        p2 = p2 * 14.5038;
+    }
+
+    var t = parseFloat(document.getElementById('t').value);
+    var input4Type = document.getElementById('input4Type').value;
+
+    if(input4Type === "F" ){
+      t = t * 1;
+    }else if(input4Type === "C" ){
+    t = (t * 9/5)+32;
+    }
+
+    var atm = parseFloat(document.getElementById('atm').value);
+    var input5Type = document.getElementById('input5Type').value;
+
+    if(input5Type === "psig" ){
+        atm = atm * 1;
+    }else if(input5Type === "kpag" ){
+        atm = atm * 0.145038;
+    }else if(input5Type === "bar" ){
+        atm = atm * 14.5038;
+    }
+
+    
+    var sg = parseFloat(document.getElementById('sg').value);
+    var z = parseFloat(document.getElementById('z').value);
+    
+    
+    var ans1 = Math.log((p1+atm)/(p2+atm));
+    var ans2 = Math.sqrt(sg/(z*(t+460)));
+    var ans3 = 5577 * v / dia;
+    var ans4 = (ans1 * ans2 * ans3)/60;
+    
+
+       {  
+
+        document.getElementById('result').value = ans4.toFixed(1);
+             
+    }
+}
+</script>
+</body>
+</html>

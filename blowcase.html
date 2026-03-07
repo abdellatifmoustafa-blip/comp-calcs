@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+#myDIV {
+width: 100%;
+padding: 0px 20px ;
+text-align: justify;
+background-color: white;
+font-size: larger;
+margin-top: 35px;
+margin-left: 30;
+display: inline-block;
+display: none;
+}      
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-size: 13px;
+  color: #6a6c6f;
+  margin: 0;
+  padding: 0;
+  height: 140%;
+}
+.wrap {
+  padding: 15px 20px 40px 20px;
+  min-width: 320px;
+}
+
+.layout > .layout-heading {
+  color: inherit;
+  font-weight: 600;
+  padding: 10px 4px;
+  transition: all .3s;
+  border: 3px solid transparent;
+  margin-top: 20px;
+}
+
+.layout .layout-body {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.layout-tools a {
+  margin-left: 10px;
+  color: #9d9fa2;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ident, .ident {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 900px) {
+     .ident {
+    float: left; width: 50%;
+}}
+
+@media (max-width: 900px) {
+  #myDIV  { width: 300px;} }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font: large;
+}
+.boxes {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.wrapper {
+  margin-bottom: 15px;
+}
+.combine {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.combine-addon,
+.input-group .boxes {
+  display: table-cell;
+}
+.combine-addon{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.combine-addon:last-child
+ {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+ }
+
+.combine-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combine .boxes:first-child,
+.combine-addon:first-child
+ {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+
+.combine-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;  
+}
+
+
+.drop-down-class select {
+    border: none;    
+    height: 100%;
+    background-color: #eee;
+    width: 90px; 
+    text-indent: 1px; 
+    color: #000000;
+    padding: 5px;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;   
+  }  
+
+
+
+.inputProcess{
+  background-color:none;
+  color: rgb(29, 25, 25);
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0px;
+  height: 40px;
+} 
+
+.container{
+text-align: center;
+
+width: 100%;
+height: 10px;
+padding-top: 0px;
+}
+
+.btn{
+font-size: 25px;
+background-color:  lightgray;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: black;
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(gray 0%, lightgray 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+.button2 {
+  font-size: 25px;
+background-color:  lightgray;
+color: #444;
+border: 3px outset #888;
+background: #999;
+padding: 9px 32px;
+box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+background:linear-gradient(160deg, #666, #444);
+text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin-left: 0px;
+margin-bottom: 40px;
+height: 40px;
+color: black;
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+background-image: linear-gradient(gray 0%, lightgray 100%);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+border-bottom: solid 3pxgraya;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;}
+.accordion {
+  background-color: lightgray;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  height: 80px;
+  width: 100%;
+  border: 3px outset #888;
+  text-align: center;
+  outline: none;
+  font-size: 45px;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  background: #999;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  background:linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  color: black;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  background-image: -webkit-linear-gradient(#6795fd 0%, #67ceff 100%);
+  background-image: linear-gradient(gray 0%, lightgray 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid ;
+  }
+
+  .accordion:active{
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+  border: 3px outset #ddd;
+  color:black;
+  background: linear-gradient(160deg, #666, #444);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;}
+
+@media (max-width: 900px) {
+  .accordion  { font-size: 25px;} }
+
+
+
+
+  .panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  }
+  </style>   
+</head>
+<body>
+  <button4 style="text-align: center; width:100%" class="accordion">Blowcase Sizing</button4>
+  <div class="panel">
+    <br><br>
+
+  <div class="container">
+    <button class ="btn" onclick="myFunction1()"> Read Me </button>
+    </div>
+  
+  
+  
+  <div id="myDIV">
+      <form> 
+
+        <span>Typical Blowcase has 4 connections with control valves as follows<br/>
+           1- Liquid Fill nozzle: to dump liquid upstream of the compressor<br>
+           2- Liquid dump nozzle: dump liquids downstream of the compressor<br>
+           3- Balance line: connected with suction scrubber or inlet separator <br>
+           4- Power line: connected with compressor discharge upstream of AC<br>
+        The driving force required to push the liquids out of the blowcase is obtained from delta pressure cause by the AfterCooler.<br>
+        increse "the flow rate by %age" until match the AC pressure drop<br>
+        Orifice plates may be required on the compressor dischargein order to increse liquid dump rates.       
+     
+        <br/>
+        </span>  
+    </form>
+
+
+
+
+</div>
+<div class="wrap">
+   <div class="left">
+      <div class="ident">
+        <div class="layout">
+            <div class="layout-heading">
+               <div class="layout-tools"></div>
+            </div>
+              <div class="layout-body">
+                  <form role="form">            						
+  <div class="wrapper"> 
+    <div class="inputProcess">Input process Data</div><br>
+
+    <label class="label">ID of vessel</label>
+    <div class="combine">
+        <input type="text" class="boxes" id="id" value="36">
+        <div class="combine-addon">
+            <div class="drop-down-class">
+              <select class="first" id="input1Type">
+                <option value="in">in</option> 
+                <option value="ft">ft</option>
+                <option value="m">m</option>
+                <option value="mm">mm</option>
+            </select> 
+        </div></div></div></div>
+
+        <div class="wrapper">
+        <label class="label">Length of vessel S/S</label>
+        <div class="combine">
+            <input type="text" class="boxes" id="ft" value="6">
+            <div class="combine-addon">
+                <div class="drop-down-class">
+            <select class="first" id="input2Type">
+            <option value="in">in</option>
+            <option value="ft">ft</option>
+            <option value="m">m</option>
+            <option value="mm">mm</option>
+                </select>
+            </div></div></div></div>
+
+            <div class="wrapper">
+            <label class="label">Liquid rate</label>
+            <div class="combine">
+                <input type="text" class="boxes" id="f" value="500">
+                <div class="combine-addon">
+                    <div class="drop-down-class">
+                      <select class="first" id="input3Type">                        
+                        <option value="m3/day">m3/day</option>
+                        <option value="l/s">l/s</option>
+                        <option value="gpm">gpm</option>
+                    </select> 
+                </div></div></div></div>
+
+            <div class="wrapper">
+                <label class="label">Liquid density</label>
+                    <div class="combine">
+                       <input type="text" class="boxes" id="sg" value="62">
+                          <div class="combine-addon">
+                              <div class="drop-down-class">
+              <select class="first" id="input4Type">
+                <option value="lb/ft3">lb/ft3</option>
+                <option value="kg/m3">kg/m3</option>
+                                </select>
+            </div></div></div></div>
+
+<div class="wrapper">
+    <label class="label">Height of low liquid, %age</label>
+    <input type="text" class="boxes" id="ll" value="10">
+</div> 
+
+<div class="wrapper">
+    <label class="label">Height of high liquid, %age</label>
+    <input type="text" class="boxes" id="hl" value="90">
+</div>
+
+<div class="wrapper">
+    <label class="label">Coefficient of discharge</label>
+    <input type="text" class="boxes" id="cd" value="0.62">
+</div>
+
+<div class="wrapper">
+    <label class="label">Increase the  flow rate by %age</label>
+    <input type="text" class="boxes" id="rate" value="100">
+</div>
+
+
+<div class="wrapper">
+    <label class="label">Outlet nozzle</label>
+        <select class="boxes" id="pipeid">
+            <option value='2" sch. 40(STD)'>2" sch. 40(STD)</option>
+            <option value='2" sch. 80(XS)'>2" sch. 80(XS)</option>
+            <option value='2" sch. 160'>2" sch. 160</option>
+            <option value='2" sch. XXS'>2" sch. XXS</option>
+            <option value='3" sch. 40(STD)'>3" sch. 40(STD)</option>
+            <option value='3" sch. 80(XS)'>3" sch. 80(XS)</option>
+            <option value='3" sch. 160'>3" sch. 160</option>
+            <option value='3" sch. XXS'>3" sch. XXS</option>
+            <option value='4" sch. 40(STD)'>4" sch. 40(STD)</option>
+            <option value='4" sch. 80(XS)'>4" sch. 80(XS)</option>
+            <option value='4" sch. 120'>4" sch. 120</option>
+            <option value='4" sch. 160'>4" sch. 160</option>
+            <option value='4" sch. XXS'>4" sch. XXS</option>
+            <option value='6" sch. 40(STD)'>6" sch. 40(STD)</option>
+            <option value='6" sch. 80(XS)'>6" sch. 80(XS)</option>
+            <option value='6" sch. 120'>6" sch. 120</option>
+            <option value='6" sch. 160'>6" sch. 160</option>
+            <option value='6" sch. XXS'>6" sch. XXS</option>
+        </select>	
+  
+  </div> 
+
+
+</form>
+</div>
+</div>
+</div>
+<div class="ident">
+    <div class="layout">
+       <div class="layout-heading">
+       <div class="layout-tools">
+    </div></div>
+    <div class="layout-body ">
+     <div class="wrapper">
+
+        <button class="button2" onclick="calculate()">Result</button><br><br> 
+
+        <label class="label">Time to empty vessel without  external pressure, Minutes   </label>
+        <input type="text" class="boxes" id="answer10" disabled><br>
+        <label class="label">Time to empty vessel with  external pressure, Minutes   </label>
+        <input type="text" class="boxes" id="answer11" disabled><br>
+        <label class="label">Cycles per hour   </label>
+        <input type="text" class="boxes" id="answer12" disabled><br>
+        <label class="label">Time to fill vessel before cycle starts, Minutes   </label>
+        <input type="text" class="boxes" id="answer13" disabled><br>
+        <label class="label">To complete 1 million cycles Years  </label>
+        <input type="text" class="boxes" id="answer14" disabled><br>
+        <label class="label">Pressure on liquid surface, psi (kPa)  </label>
+        <input type="text" class="boxes" id="answer15" disabled>
+
+    </div></div></div></div> 
+
+  </div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+
+
+function myFunction1() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function calculate (){
+    var pipeid = document.getElementById('pipeid').value;
+var area;
+
+        if(pipeid === '2" sch. 40(STD)'){
+        area = 3.357; }
+       else if(pipeid === '2" sch. 80(XS)'){
+        area = 2.954; }
+       else if(pipeid === '2" sch. 160'){
+        area = 2.236; }
+        else if(pipeid === '2" sch. XXS'){
+        area = 1.775;}
+        else if(pipeid === '3" sch. 40(STD)'){
+        area = 7.396;}
+        else if(pipeid === '3" sch. 80(XS)'){
+        area = 6.608;}
+        else if(pipeid === '3" sch. 160'){
+        area = 5.410;}
+       else if(pipeid === '3" sch. XXS'){
+        area = 4.156;}
+       else if(pipeid === '4" sch. 40(STD)'){
+        area = 12.735;}
+       else if(pipeid === '4" sch. 80(XS)'){
+        area = 11.502;}
+        else if(pipeid === '4" sch. 120'){
+        area = 10.319;}
+       else if(pipeid === '4" sch. 160'){
+        area = 9.287;}
+        else if(pipeid === '4" sch. XXS'){
+        area = 7.806;}
+        else if(pipeid === '6" sch. 40(STD)'){
+        area = 28.902;}
+       else if(pipeid === '6" sch. 80(XS)'){
+        area = 26.077;}
+       else if(pipeid === '6" sch. 120'){
+        area = 23.776;}
+       else if(pipeid === '6" sch. 160'){
+        area = 21.140;}
+        else if(pipeid === '6" sch. XXS'){
+        area = 18.842;}
+       
+    var id = parseFloat(document.getElementById('id').value);
+    var input1Type = document.getElementById('input1Type').value;
+
+    if(input1Type === "in" ){
+        id = id * 1;
+    }else if(input1Type === "ft" ){
+        id = id * 12;
+    }else if(input1Type === "m" ){
+        id = id * 39.37;
+    }else if(input1Type === "mm" ){
+        id = id * 0.0394;
+    }
+
+    var ft = parseFloat(document.getElementById('ft').value);
+    var input2Type = document.getElementById('input2Type').value;
+
+    if(input2Type === "in" ){
+        ft = ft * 1;
+    }else if(input2Type === "ft" ){
+        ft = ft * 12;
+    }else if(input2Type === "m" ){
+        ft = ft * 39.37;
+    }else if(input2Type === "mm" ){
+        ft = ft * 0.0394;
+    }
+
+    var f = parseFloat(document.getElementById('f').value);
+    var input3Type = document.getElementById('input3Type').value;
+
+    if(input3Type === "m3/day" ){
+        f = f * 1;
+    }else if(input3Type === "l/s" ){
+        f = f * 12;
+    }else if(input3Type === "gpm" ){
+        f = f * 39.37;
+    }
+
+    var sg = parseFloat(document.getElementById('sg').value);
+    var input4Type = document.getElementById('input4Type').value;
+
+    if(input4Type === "lb/ft3" ){
+        sg = sg * 1;
+    }else if(input4Type === "kg/m3" ){
+        sg = sg * 16.018;
+    }
+   
+    var ll = parseFloat(document.getElementById("ll").value);
+    var hl = parseFloat(document.getElementById("hl").value);
+    var cd = parseFloat(document.getElementById("cd").value);
+    var rate = parseFloat(document.getElementById("rate").value);
+    
+    var total1 = id/12;
+    var total2 = total1*ll/100;
+    var total3 = total1*hl/100;
+    var total4 = ((total1/2)**2*Math.acos(((total1/2)-total2)/(total1/2))-((total1/2)-total2)*(2*(total1/2)*total2-total2**2)**(0.5))*ft;
+    var total5 = 3.14/6*total2**2*(1.5*total1-total2);
+    var total6 = total4 + total5;
+
+    var total7 = ((total1/2)**2*Math.acos(((total1/2)-total3)/(total1/2))-((total1/2)-total3)*(2*(total1/2)*total3-total3**2)**(0.5))*ft;
+    var total8 = 3.14/6*total3**2*(1.5*total1-total3);
+    var total9 = total7 + total8;
+
+    var total10 = total6 + total9;
+    var total11 = total3*12;
+    var total12 = total2*12; 
+    var total13 = total9*7.481;
+    var total14 = total6*7.481;
+    var total15 = total13-total14;
+    var total16 = (total15/(f/5.4516))*60;
+    var total17 = area;
+    var total18 = (4*ft*12/(3*cd*total17*Math.sqrt(2*386)))*((2*(id/2))-total12)**(3/2)-(2*(id/2)-total11)**(3/2)+2*(-(2*3.14*(id/4)**2/((id/2)**2*cd*
+    total17*Math.sqrt(2*386)))*(((id/2)**2*total12**(1/2)-(id/2)**2*total12**(1/2)-(1/5)*total12**(5/2)+(2/3)*(id/2)*total12**(3/2))-
+    ((id/2)**2*total11**(1/2)-(id/2)**2*total11**(1/2)-(1/5)*total11**(5/2)+(2/3)*(id/2)*total11**(3/2))));
+    var total19 = total15 - total18;
+    var total20 = total19 * 60;
+    var total21 = total15*0.13368/total18;
+    var total22 = total15*0.13368*12**3/total18;
+    var total23 = total21*12**3/(total17*Math.sqrt(2*386*(total11-total12)));
+    var total24 = total22*(1+rate/100);
+    var total25 = ((total24/(total23*total17*Math.sqrt(2*386)))**2-(total11-total12))*(sg/12**3);
+    var total25kpag = total25 * 6.895;
+    var total26 = total15*0.13368*12**3/total24;
+    var total27 = (((total16+total26)/60)*1000000)/(60*24);
+    var total28 = total27/365;
+    var total29 = 3600/(total26+total16);
+    var total31 = total18/60;
+    var total32 = total26/60;
+    var total33 = total16/60;
+    {  
+
+        document.getElementById("answer10").value=total31.toFixed(2);
+        document.getElementById("answer11").value=total32.toFixed(2);
+        document.getElementById("answer12").value=total29.toFixed(1);
+        document.getElementById("answer13").value=total33.toFixed(1);
+        document.getElementById("answer14").value=total28.toFixed(1);
+        document.getElementById("answer15").value=total25.toFixed(1)+"psi"+" ("+total25kpag.toFixed(1)+" kPa)";
+    
+    }
+    
+} 
+</script>
+</body>
+</html>

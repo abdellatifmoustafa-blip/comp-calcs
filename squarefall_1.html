@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SquareFall Challenge</title>
+<style>
+body{
+  background:#111;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+}
+#game{
+  display:flex;
+  gap:40px;
+}
+#board{
+  display:grid;
+  grid-template-columns:repeat(14,40px);
+  grid-template-rows:repeat(9,40px);
+  gap:2px;
+  background:#333;
+  padding:10px;
+}
+.cell{
+  width:40px;
+  height:40px;
+  cursor:pointer;
+}
+.empty{
+  background:#222;
+  cursor:default;
+}
+.red{background:#e74c3c;}
+.green{background:#27ae60;}
+.blue{background:#3498db;}
+.yellow{background:#f1c40f;}
+.pink{background:#ff66cc;}
+#panel{width:220px;}
+button{
+  padding:10px;
+  width:100%;
+  margin-top:10px;
+  font-size:16px;
+}
+table{
+  width:100%;
+  margin-top:10px;
+  color:white;
+}
+td{
+  padding:4px;
+}
+</style>
+</head>
+<body>
+<div id="game">
+  <div id="board"></div>
+
+  <div id="panel">
+    <h2>SquareFall Challenge</h2>
+    <div>Level: <span id="level">1</span></div>
+    <div>Score: <span id="score">0</span></div>
+    <div>Target: <span id="target">5000</span></div>
+    <button id="newGameBtn">New Game</button>
+    <h3>Top Scores</h3>
+    <table id="scores"></table>
+  </div>
+</div>
+
+<script>
+const rows = 9;
+const cols = 14;
+const colors = ["red","green","blue","yellow","pink"];
+const targets = [5000,11250,20000,31250,45000,61250,80000,101250];
+
+let board = [];
+let score = 0;
+let level = 1;
+let gameOver = false;
+let boardCheckTimer = null;
+
+const boardDiv = document.getElementById("board");
+const levelEl = document.getElementById("level");
+const scoreEl = document.getElementById("score");
+const targetEl = document.getElementById("target");
+document.getElementById("newGameBtn").addEventListener("click", newGame);
+
+function randomColor(){
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function updatePanel(){
+  scoreEl.innerText = score;
+  levelEl.innerText = level;
+  targetEl.innerText = targets[level - 1] ?? "MAX";
+}
+
+function showScores(){
+  const table = document.getElementById("scores");
+  table.innerHTML = "";
+
+  const stored = localStorage.getItem("squarefall_scores");
+  const scores = stored ? JSON.parse(stored) : [];
+
+  scores.forEach((s, i) => {
+    const row = document.createElement("tr");
+    row.innerHTML =
+      "<td>" + (i + 1) + "</td>" +
+      "<td>" + s.name + "</td>" +
+      "<td>" + s.score + "</td>";
+    table.appendChild(row);
+  });
+}
+
+function endGame(){
+  if (gameOver) return;
+  gameOver = true;
+
+  const stored = localStorage.getItem("squarefall_scores");
+  let scores = stored ? JSON.parse(stored) : [];
+
+  const qualifies = scores.length < 10 || score > scores[scores.length - 1].score;
+
+  if (qualifies) {
+    let name = prompt("Game Over\nScore: " + score + "\nEnter your name:");
+    if (!name) name = "Player";
+
+    scores.push({ name, score });
+    scores.sort((a, b) => b.score - a.score);
+    scores = scores.slice(0, 10);
+
+    localStorage.setItem("squarefall_scores", JSON.stringify(scores));
+  } else {
+    alert("Game Over\nScore: " + score);
+  }
+
+  showScores();
+}
+
+function hasMoves(){
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const color = board[r][c];
+      if (!color) continue;
+      if (c + 1 < cols && board[r][c + 1] === color) return true;
+      if (r + 1 < rows && board[r + 1][c] === color) return true;
+    }
+  }
+  return false;
+}
+
+function scheduleBoardCheck(){
+  if (boardCheckTimer !== null) {
+    clearTimeout(boardCheckTimer);
+  }
+  boardCheckTimer = setTimeout(() => {
+    boardCheckTimer = null;
+    checkBoardState();
+  }, 20);
+}
+
+function newBoard(){
+  do {
+    board = [];
+    for (let r = 0; r < rows; r++) {
+      const row = [];
+      for (let c = 0; c < cols; c++) {
+        row.push(randomColor());
+      }
+      board.push(row);
+    }
+  } while (!hasMoves());
+
+  renderBoard();
+  scheduleBoardCheck();
+}
+
+function newGame(){
+  score = 0;
+  level = 1;
+  gameOver = false;
+  newBoard();
+  updatePanel();
+  showScores();
+}
+
+function renderBoard(){
+  boardDiv.innerHTML = "";
+
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const cell = document.createElement("div");
+      const color = board[r][c];
+
+      cell.className = "cell " + (color ? color : "empty");
+      cell.dataset.r = r;
+      cell.dataset.c = c;
+
+      if (color && !gameOver) {
+        cell.onclick = clickCell;
+      }
+
+      boardDiv.appendChild(cell);
+    }
+  }
+}
+
+function findGroup(startR, startC, color){
+  const stack = [[startR, startC]];
+  const visited = new Set();
+  const group = [];
+
+  while (stack.length) {
+    const [r, c] = stack.pop();
+    const key = r + "-" + c;
+
+    if (r < 0 || r >= rows || c < 0 || c >= cols) continue;
+    if (visited.has(key)) continue;
+    visited.add(key);
+
+    if (board[r][c] !== color) continue;
+
+    group.push([r, c]);
+
+    stack.push([r + 1, c]);
+    stack.push([r - 1, c]);
+    stack.push([r, c + 1]);
+    stack.push([r, c - 1]);
+  }
+
+  return group;
+}
+
+function removeGroup(group){
+  for (const [r, c] of group) {
+    board[r][c] = null;
+  }
+}
+
+function collapse(){
+  for (let c = 0; c < cols; c++) {
+    let writeRow = rows - 1;
+
+    for (let r = rows - 1; r >= 0; r--) {
+      if (board[r][c] !== null) {
+        board[writeRow][c] = board[r][c];
+        if (writeRow !== r) board[r][c] = null;
+        writeRow--;
+      }
+    }
+
+    while (writeRow >= 0) {
+      board[writeRow][c] = null;
+      writeRow--;
+    }
+  }
+}
+
+function shiftColumns(){
+  let writeCol = 0;
+
+  for (let c = 0; c < cols; c++) {
+    let empty = true;
+
+    for (let r = 0; r < rows; r++) {
+      if (board[r][c] !== null) {
+        empty = false;
+        break;
+      }
+    }
+
+    if (!empty) {
+      if (writeCol !== c) {
+        for (let r = 0; r < rows; r++) {
+          board[r][writeCol] = board[r][c];
+          board[r][c] = null;
+        }
+      }
+      writeCol++;
+    }
+  }
+
+  while (writeCol < cols) {
+    for (let r = 0; r < rows; r++) {
+      board[r][writeCol] = null;
+    }
+    writeCol++;
+  }
+}
+
+function checkBoardState(){
+  if (gameOver) return;
+  if (hasMoves()) return;
+
+  const target = targets[level - 1];
+
+  if (target !== undefined && score >= target) {
+    level++;
+    newBoard();
+    updatePanel();
+  } else {
+    endGame();
+  }
+}
+
+function clickCell(event){
+  if (gameOver) return;
+
+  const r = Number(event.currentTarget.dataset.r);
+  const c = Number(event.currentTarget.dataset.c);
+  const color = board[r][c];
+  if (!color) return;
+
+  const group = findGroup(r, c, color);
+  if (group.length < 2) return;
+
+  removeGroup(group);
+  collapse();
+  shiftColumns();
+
+  score += group.length * group.length * 10;
+  updatePanel();
+  renderBoard();
+  scheduleBoardCheck();
+}
+
+newGame();
+</script>
+</body>
+</html>
